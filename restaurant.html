@@ -1,0 +1,877 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Restaurant & Dining Menu - Sri Skanda Bhavan | Breakfast, Lunch, Dinner & Vaitheegam</title>
+<meta name="description" content="Authentic South Indian pure vegetarian meals at Sri Skanda Bhavan. Regular combos, Vaitheegam (no onion no garlic), and à la carte. WhatsApp ordering." />
+<link rel="icon" href="assets/images/logo.PNG" />
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
+<link rel="stylesheet" href="css/style.css" />
+<style>
+/* ── ORDER MODAL ─────────────────────────────────────────── */
+.order-modal-overlay {
+  position: fixed; inset: 0;
+  background: rgba(26,26,46,0.82);
+  backdrop-filter: blur(8px);
+  z-index: 8000;
+  display: flex; align-items: center; justify-content: center;
+  padding: 20px;
+  opacity: 0; pointer-events: none;
+  transition: opacity 0.3s;
+}
+.order-modal-overlay.open { opacity: 1; pointer-events: all; }
+
+.order-modal {
+  background: var(--card-bg);
+  border-radius: var(--r-xl);
+  width: 100%; max-width: 560px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
+  transform: scale(0.94) translateY(20px);
+  transition: transform 0.3s var(--ease);
+}
+.order-modal-overlay.open .order-modal { transform: scale(1) translateY(0); }
+
+.order-modal-header {
+  background: var(--navy);
+  padding: 22px 28px;
+  border-radius: var(--r-xl) var(--r-xl) 0 0;
+  display: flex; align-items: center; justify-content: space-between;
+}
+.order-modal-header h3 { color: var(--white); font-size: 1.2rem; margin: 0; }
+.order-modal-header .plan-tag {
+  font-size: 0.72rem; color: var(--gold); letter-spacing: 0.08em;
+  text-transform: uppercase; margin-top: 3px; display: block;
+}
+.modal-close-btn {
+  width: 34px; height: 34px; border-radius: 50%;
+  background: rgba(255,255,255,0.1);
+  border: none; color: white; font-size: 1.2rem;
+  cursor: pointer; display: flex; align-items: center; justify-content: center;
+  transition: background 0.2s; flex-shrink: 0;
+}
+.modal-close-btn:hover { background: rgba(255,255,255,0.2); }
+
+.order-modal-body { padding: 28px; }
+.order-modal-body .form-group { margin-bottom: 16px; }
+.order-modal-body label {
+  display: block; font-size: 0.76rem;
+  color: var(--text-mid); margin-bottom: 5px; letter-spacing: 0.04em;
+}
+.order-modal-body .form-control {
+  width: 100%; padding: 11px 15px;
+  border: 1px solid var(--divider);
+  border-radius: var(--r-sm);
+  background: var(--white);
+  font-family: var(--font-b); font-size: 0.9rem; color: var(--text-dark);
+  transition: border-color 0.2s, box-shadow 0.2s;
+  appearance: none;
+}
+.order-modal-body .form-control:focus {
+  outline: none; border-color: var(--gold);
+  box-shadow: 0 0 0 3px rgba(249,168,37,0.14);
+}
+.modal-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
+@media (max-width:480px) { .modal-form-row { grid-template-columns: 1fr; } }
+
+.modal-submit-btn {
+  width: 100%; padding: 14px;
+  background: var(--whatsapp); color: white;
+  border: none; border-radius: var(--r-sm);
+  font-family: var(--font-b); font-size: 0.88rem;
+  letter-spacing: 0.07em; text-transform: uppercase;
+  cursor: pointer; margin-top: 8px;
+  display: flex; align-items: center; justify-content: center; gap: 9px;
+  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
+}
+.modal-submit-btn:hover {
+  background: #1DA851;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(37,211,102,0.38);
+}
+.modal-note {
+  text-align: center; font-size: 0.72rem;
+  color: var(--text-light); margin-top: 10px;
+}
+
+/* ── COMBO CARD BTN full-width fix ──────────────────────── */
+.combo-ft .btn { width: 100%; justify-content: center; border-radius: 0 0 var(--r-lg) var(--r-lg); padding: 13px; font-size: 0.82rem; }
+
+/* type-section display controlled by JS only */
+
+
+</style>
+</head>
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar">
+  <div class="container">
+    <a href="index.html" class="nav-logo">
+      <img src="assets/images/logo-tsp.png" alt="Sri Skanda Bhavan" />
+      <div class="nav-logo-text"><span class="brand">Sri Skanda Bhavan</span><span class="tagline">Live the Life</span></div>
+    </a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="rooms.html">Rooms</a></li>
+      <li><a href="restaurant.html" class="active">Restaurant</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn-primary nav-cta btn-sm">Book Now</a>
+    <div class="nav-ham"><span></span><span></span><span></span></div>
+  </div>
+</nav>
+<div class="nav-overlay"></div>
+<div class="nav-drawer">
+  <span class="nav-drawer-close">✕</span>
+  <nav class="drawer-links">
+    <a href="index.html">Home</a><a href="rooms.html">Rooms</a>
+    <a href="restaurant.html" class="active">Restaurant</a><a href="contact.html">Contact</a>
+  </nav>
+  <div class="drawer-cta mt-8"><a href="contact.html" class="btn btn-primary">Book Now</a></div>
+</div>
+
+<!-- HERO -->
+<section class="rest-hero">
+  <div class="rest-hero-bg"><img src="assets/images/skanda-food-hero.png" alt="South Indian Dining" /></div>
+  <div class="rest-hero-overlay"></div>
+  <div class="rest-hero-content">
+    <div class="container">
+      <h1>Authentic South Indian <em>Dining Experience</em></h1>
+      <p>Pure vegetarian meals - hearty combos, traditional Vaitheegam (no onion, no garlic) cuisine, and fresh à la carte dishes.</p>
+      <div class="rest-badges">
+        <span class="rest-badge">100% Pure Veg</span>
+        <span class="rest-badge">Vaitheegam Available</span>
+        <span class="rest-badge">Banana Leaf Combos</span>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY TABS -->
+<div class="menu-tabs-bar" id="menu">
+  <div class="menu-tabs-inner">
+    <div class="meal-tabs">
+      <button class="meal-tab active" data-meal="breakfast">Breakfast</button>
+      <button class="meal-tab" data-meal="lunch">Lunch</button>
+      <button class="meal-tab" data-meal="dinner">Dinner</button>
+    </div>
+    <div class="type-toggles">
+      <button class="type-toggle" id="tog-regular">Regular</button>
+      <button class="type-toggle" id="tog-vaitheegam">Vaitheegam</button>
+      <button class="type-toggle" id="tog-alacarte">À La Carte</button>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ BREAKFAST ══════════════ -->
+<div class="menu-section active" data-meal="breakfast">
+  <div class="container" style="padding-top:64px;padding-bottom:80px;">
+
+    <!-- Regular Breakfast -->
+    <div class="menu-type-section" data-type="regular">
+      <div class="mb-8 reveal">
+        <div class="menu-sub-label">Regular Breakfast Combos</div>
+        <h3>Breakfast Combos</h3>
+        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Start your morning right - freshly prepared, served with love.</p>
+      </div>
+      <div class="combo-grid">
+        <!-- B-Plan 1 -->
+        <div class="combo-card reveal d1">
+          <div class="combo-hd" style="background:#26A69A;">
+            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Breakfast Plan 1</div></div>
+            <div class="combo-plan-price">₹159</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal</li>
+              <li>Poori (1) with Poori Masal</li><li>Medu Vadai</li>
+              <li>Chutney (2 varieties)</li><li>Sambar</li><li>Filter Coffee</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Breakfast Plan 1" data-price="₹159" data-meal="Breakfast">📱 Order on WhatsApp</button></div>
+        </div>
+        <!-- B-Plan 2 -->
+        <div class="combo-card reveal d2">
+          <div class="combo-hd" style="background:#F9A825;">
+            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Breakfast Plan 2</div></div>
+            <div class="combo-plan-price">₹199</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal / Rava Pongal</li>
+              <li>Poori &amp; Masal</li><li>Uththappam / Idiyappam with Kadappa</li>
+              <li>Chutney (2 varieties)</li><li>Sambar</li><li>Coffee</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Breakfast Plan 2" data-price="₹199" data-meal="Breakfast">📱 Order on WhatsApp</button></div>
+        </div>
+        <!-- B-Plan 3 -->
+        <div class="combo-card reveal d3">
+          <div class="combo-hd" style="background:#EF5350;">
+            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Breakfast Plan 3</div></div>
+            <div class="combo-plan-price">₹249</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Kaasi Halwa</li><li>Panner Jamun</li><li>Idli (2)</li>
+              <li>Ven Pongal with Chidambaram Kosthu</li><li>Poori (1) with Poori Masal</li>
+              <li>Mini Masala Dosa</li><li>Sambar Vadi</li>
+              <li>Chutney (2 varieties)</li><li>Sambar</li><li>Coffee</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Breakfast Plan 3" data-price="₹249" data-meal="Breakfast">📱 Order on WhatsApp</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vaitheegam Breakfast -->
+    <div class="menu-type-section" data-type="vaitheegam">
+      <div class="mb-8 reveal">
+        <span class="vaitheegam-badge">Vaitheegam - No Onion · No Garlic · Pure Saatvik</span>
+        <h3 style="margin-top:8px;">Vaitheegam Breakfast</h3>
+        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Traditionally prepared for those who follow pure Saatvik practices.</p>
+      </div>
+      <div class="combo-grid combo-2">
+        <div class="combo-card reveal d1">
+          <div class="combo-hd" style="background:#66BB6A;">
+            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Breakfast Plan 1</div></div>
+            <div class="combo-plan-price">₹199</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal</li>
+              <li>Medu Vadai</li><li>Chutney (2 varieties)</li><li>Sambar</li><li>Filter Coffee</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Breakfast Plan 1" data-price="₹199" data-meal="Breakfast">📱 Order on WhatsApp</button></div>
+        </div>
+        <div class="combo-card reveal d2">
+          <div class="combo-hd" style="background:#43A047;">
+            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Breakfast Plan 2</div></div>
+            <div class="combo-plan-price">₹249</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal / Rava Pongal</li>
+              <li>Poori &amp; Masal</li><li>Uththappam / Idiyappam with Kadappa</li>
+              <li>Chutney (2 varieties)</li><li>Sambar</li><li>Coffee</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Breakfast Plan 2" data-price="₹249" data-meal="Breakfast">📱 Order on WhatsApp</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- A La Carte Breakfast - ALL 14 CLIENT ITEMS -->
+    <div class="menu-type-section" data-type="alacarte">
+      <div class="mb-8 reveal">
+        <div class="menu-sub-label">Walking Breakfast - À La Carte</div>
+        <h3>Order Individual Items</h3>
+        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Tap the WhatsApp button on any item to order instantly.</p>
+      </div>
+      <div class="alacarte-grid reveal">
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-idli.png" alt="Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Idli (2 Pcs)</div><div class="ac-price">₹40</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Idli%20(2%20Pcs)%20-%20%E2%82%B940%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-sambar-idli.png" alt="Sambar Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Sambar Idli</div><div class="ac-price">₹60</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Sambar%20Idli%20-%20%E2%82%B960%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ghee-podi-idli.png" alt="Ghee Podi Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ghee Podi Idli</div><div class="ac-price">₹50</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Ghee%20Podi%20Idli%20-%20%E2%82%B950%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-plain-dosa.png" alt="Plain Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Plain Dosa</div><div class="ac-price">₹70</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Plain%20Dosa%20-%20%E2%82%B970%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ghee-dosa.png" alt="Ghee Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ghee Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Ghee%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-masala-dosa.png" alt="Masala Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Masala Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Masala%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-mysore-masala-dosa.png" alt="Mysore Masala Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Mysore Masala Dosa</div><div class="ac-price">₹100</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Mysore%20Masala%20Dosa%20-%20%E2%82%B9100%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-onion-dosa.png" alt="Onion Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Onion Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Onion%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-rava-dosa.png" alt="Rava Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Rava Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Rava%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-podi-dosa.png" alt="Podi Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Podi Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Podi%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-uthappam.png" alt="Plain Uthappam" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Plain Uthappam</div><div class="ac-price">₹85</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Plain%20Uthappam%20-%20%E2%82%B985%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-onion-dosa.png" alt="Onion Uthappam" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Onion Uthappam</div><div class="ac-price">₹90</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Onion%20Uthappam%20-%20%E2%82%B990%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ven-pongal.png" alt="Ven Pongal" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ven Pongal</div><div class="ac-price">₹65</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Ven%20Pongal%20-%20%E2%82%B965%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-poori-masala.png" alt="Poori with Masala" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Poori (2) with Masala</div><div class="ac-price">₹100</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Poori%20(2)%20with%20Masala%20-%20%E2%82%B9100%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ LUNCH ══════════════ -->
+<div class="menu-section" data-meal="lunch">
+  <div class="container" style="padding-top:64px;padding-bottom:80px;">
+
+    <!-- Regular Lunch -->
+    <div class="menu-type-section" data-type="regular">
+      <div class="mb-8 reveal">
+        <div class="menu-sub-label">Regular Lunch Combos</div>
+        <h3>Lunch Combos</h3>
+        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">A complete, satisfying South Indian meal - the way it's meant to be.</p>
+      </div>
+      <div class="combo-grid">
+        <!-- L-Plan 1 -->
+        <div class="combo-card reveal d1">
+          <div class="combo-hd" style="background:#26A69A;">
+            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Lunch Plan 1</div></div>
+            <div class="combo-plan-price">₹160</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Paayasam</li><li>Mini Jaangiri</li><li>Poriyal (2 varieties)</li><li>Kootu</li>
+              <li>Ghee Dal</li><li>Masal Vada (1)</li><li>Rice</li><li>Sambar</li>
+              <li>Vathal Kuzhambu</li><li>Rasam</li><li>Pickle</li><li>Curd</li><li>Appalam</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Lunch Plan 1" data-price="₹160" data-meal="Lunch">📱 Order on WhatsApp</button></div>
+        </div>
+        <!-- L-Plan 2 -->
+        <div class="combo-card reveal d2">
+          <div class="combo-hd" style="background:#F9A825;">
+            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Lunch Plan 2</div></div>
+            <div class="combo-plan-price">₹269</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Paayasam</li><li>Onion Raitha</li><li>Sweet Pachadi</li><li>Poriyal (2 varieties)</li>
+              <li>Kootu</li><li>Ghee Dhal</li><li>Masal Vadai (1)</li><li>Veg Briyani</li>
+              <li>Rice</li><li>Sambar</li><li>Vathal Kozhambu</li><li>Tomato Rasam</li>
+              <li>Curd</li><li>Chips</li><li>Appalam</li><li>Pickle</li>
+              <li>Ice Cream</li><li>Beda</li><li>Banana</li><li>Mini Jaangiri</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Lunch Plan 2" data-price="₹269" data-meal="Lunch">📱 Order on WhatsApp</button></div>
+        </div>
+        <!-- L-Plan 3 -->
+        <div class="combo-card reveal d3">
+          <div class="combo-hd" style="background:#EF5350;">
+            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Lunch Plan 3</div></div>
+            <div class="combo-plan-price">₹349</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Rice Kheer Paayasam</li><li>Onion Raitha</li><li>Poriyal (2 varieties)</li>
+              <li>Malabar Aviyal</li><li>Ghee Dhal</li><li>Masal Vadai (1)</li>
+              <li>Veg Briyani</li><li>Rice</li><li>Sambar</li><li>Vathal Kozhambu</li>
+              <li>Tomato Rasam</li><li>Curd</li><li>Chips</li><li>Appalam</li><li>Pickle</li>
+              <li>Ice Cream</li><li>Beda</li><li>Fruit Salad</li><li>Poli</li>
+              <li>Water Bottle 300ml</li><li>Gulab Jamun</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Lunch Plan 3" data-price="₹349" data-meal="Lunch">📱 Order on WhatsApp</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vaitheegam Lunch -->
+    <div class="menu-type-section" data-type="vaitheegam">
+      <div class="mb-8 reveal">
+        <span class="vaitheegam-badge">Vaitheegam - No Onion · No Garlic · Pure Saatvik</span>
+        <h3 style="margin-top:8px;">Vaitheegam Lunch</h3>
+        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Traditional Brahmin-style preparation for the pure Saatvik diet.</p>
+      </div>
+      <div class="combo-grid combo-2">
+        <div class="combo-card reveal d1">
+          <div class="combo-hd" style="background:#66BB6A;">
+            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Lunch Plan 1</div></div>
+            <div class="combo-plan-price">₹249</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Mini Jangiri</li><li>Paruppu Vadai</li><li>Payasam</li><li>Appalam</li>
+              <li>Potato Fry</li><li>Paruppu Usili</li><li>Aviyal</li><li>Sweet Pachadi</li>
+              <li>Ghee Dhal</li><li>Variety Rice</li><li>Rice</li><li>Kadhamba Sambar</li>
+              <li>More Kuzhambu</li><li>Rasam</li><li>Ketti More</li><li>Pickle</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Lunch Plan 1" data-price="₹249" data-meal="Lunch">📱 Order on WhatsApp</button></div>
+        </div>
+        <div class="combo-card reveal d2">
+          <div class="combo-hd" style="background:#43A047;">
+            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Lunch Plan 2</div></div>
+            <div class="combo-plan-price">₹299</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Rice</li><li>Poricha Kuzhambu (Without Tamarind)</li><li>Vatha Kuzhambu / More Kuzhambu</li>
+              <li>Lemon Rasam</li><li>Curd</li><li>Paruppu Usili</li><li>Vazhakai Kara Kari</li>
+              <li>Malabar Aviyal</li><li>Paruppu Vadai</li><li>Semiya Payasam</li>
+              <li>Javvarisi Vathal</li><li>Pickle</li><li>Badhusa</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Lunch Plan 2" data-price="₹299" data-meal="Lunch">📱 Order on WhatsApp</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- A La Carte Lunch -->
+    <div class="menu-type-section" data-type="alacarte">
+      <div class="mb-8 reveal">
+        <div class="menu-sub-label">À La Carte - Lunch</div>
+        <h3>Individual Lunch Items</h3>
+        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Order individual items. Tap WhatsApp to order.</p>
+      </div>
+      <div class="alacarte-grid reveal">
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-banana-leaf-lunch.png" alt="Banana Leaf Lunch" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Banana Leaf Lunch</div><div class="ac-price">₹120</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Banana%20Leaf%20Lunch%20-%20%E2%82%B9120%0ADate%3A%20%0APersons%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-veg-biryani.png" alt="Veg Biryani" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Veg Biryani</div><div class="ac-price">₹120</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Veg%20Biryani%20-%20%E2%82%B9120%0ADate%3A%20%0APersons%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-payasam.png" alt="Payasam" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Payasam</div><div class="ac-price">₹50</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Payasam%20-%20%E2%82%B950%0ADate%3A%20%0APersons%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-vaitheegam-thali.png" alt="Vaitheegam Thali" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Vaitheegam Thali</div><div class="ac-price">₹180</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Vaitheegam%20Thali%20-%20%E2%82%B9180%0ADate%3A%20%0APersons%3A%20" target="_blank" class="ac-wa">📱</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ══════════════ DINNER ══════════════ -->
+<div class="menu-section" data-meal="dinner">
+  <div class="container" style="padding-top:64px;padding-bottom:80px;">
+
+    <!-- Regular Dinner -->
+    <div class="menu-type-section" data-type="regular">
+      <div class="mb-8 reveal">
+        <div class="menu-sub-label">Regular Dinner Combos</div>
+        <h3>Dinner Combos</h3>
+        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">End your day with a warm, wholesome South Indian dinner.</p>
+      </div>
+      <div class="combo-grid">
+        <!-- D-Plan 1 -->
+        <div class="combo-card reveal d1">
+          <div class="combo-hd" style="background:#1565C0;">
+            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Dinner Plan 1</div></div>
+            <div class="combo-plan-price">₹149</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Idli (2)</li><li>Chappathi</li><li>Rava Kichadi / Rice Upma / Wheat Upma</li>
+              <li>Mini Uththappam (4 varieties)</li><li>Chutney (2 varieties)</li>
+              <li>Sambar</li><li>Kurma</li><li>Milagu Milk / Mass Milk</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Dinner Plan 1" data-price="₹149" data-meal="Dinner">📱 Order on WhatsApp</button></div>
+        </div>
+        <!-- D-Plan 2 -->
+        <div class="combo-card reveal d2">
+          <div class="combo-hd" style="background:#AB47BC;">
+            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Dinner Plan 2</div></div>
+            <div class="combo-plan-price">₹199</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Carrot Halwa / Bread Halwa</li><li>Idli (2)</li>
+              <li>Chappathi / Chola Poori Channa</li><li>Kichadi / Rice Upma / Wheat Upma</li>
+              <li>Bisibelabath with Vadagam</li><li>Curd Rice with Pickle</li>
+              <li>Sambar</li><li>Chutney (3 varieties)</li><li>Panagarkandu Milk / Mass Milk</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Dinner Plan 2" data-price="₹199" data-meal="Dinner">📱 Order on WhatsApp</button></div>
+        </div>
+        <!-- D-Plan 3 -->
+        <div class="combo-card reveal d3">
+          <div class="combo-hd" style="background:#1A1A2E;border:1px solid rgba(249,168,37,0.2);">
+            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Dinner Plan 3</div></div>
+            <div class="combo-plan-price">₹249</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Carrot Halwa / Dry Gulab Jamun</li><li>Idli (2)</li><li>Kothu Parota</li>
+              <li>Podi Uthappam (1)</li><li>Veg Rava Kichadi</li><li>Veg Pulav</li>
+              <li>Onion Raita</li><li>Curd Rice with Pickle</li><li>Ice Cream</li>
+              <li>Sambar</li><li>Chutney (3 varieties)</li>
+              <li>Panagarkandu Milk / Mass Milk</li><li>Water Bottle 300ml</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Dinner Plan 3" data-price="₹249" data-meal="Dinner">📱 Order on WhatsApp</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Vaitheegam Dinner -->
+    <div class="menu-type-section" data-type="vaitheegam">
+      <div class="mb-8 reveal">
+        <span class="vaitheegam-badge">Vaitheegam - No Onion · No Garlic · Pure Saatvik</span>
+        <h3 style="margin-top:8px;">Vaitheegam Dinner</h3>
+        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Pure Saatvik dinner for the spiritually inclined.</p>
+      </div>
+      <div class="combo-grid combo-2">
+        <div class="combo-card reveal d1">
+          <div class="combo-hd" style="background:#66BB6A;">
+            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Dinner Plan 1</div></div>
+            <div class="combo-plan-price">₹199</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Idli (2)</li><li>Chappathi with Dhal</li><li>Curd Rice</li><li>Rice Upma</li>
+              <li>Thakkali Thokku</li><li>Chutney (1 variety)</li><li>Sambar</li><li>Milagu Milk / Mass Milk</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Dinner Plan 1" data-price="₹199" data-meal="Dinner">📱 Order on WhatsApp</button></div>
+        </div>
+        <div class="combo-card reveal d2">
+          <div class="combo-hd" style="background:#43A047;">
+            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Dinner Plan 2</div></div>
+            <div class="combo-plan-price">₹299</div>
+          </div>
+          <div class="combo-body">
+            <div class="items-label">Includes:</div>
+            <ul class="combo-items">
+              <li>Idli (2)</li><li>Chappathi with Dhal</li><li>Curd Rice</li><li>Rice Upma</li>
+              <li>Thakkali Thokku</li><li>Chidambaram Kosthu</li><li>Mini Uththappam</li>
+              <li>Sambar Rice with Vadagam</li><li>Chutney (1 variety)</li>
+              <li>Sambar</li><li>Milagu Milk / Mass Milk</li>
+            </ul>
+            <button class="combo-more-btn"></button>
+          </div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Dinner Plan 2" data-price="₹299" data-meal="Dinner">📱 Order on WhatsApp</button></div>
+        </div>
+      </div>
+    </div>
+
+    <!-- A La Carte Dinner - ALL 15 CLIENT ITEMS -->
+    <div class="menu-type-section" data-type="alacarte">
+      <div class="mb-8 reveal">
+        <div class="menu-sub-label">Walking Dinner - À La Carte</div>
+        <h3>Individual Dinner Items</h3>
+        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Order individual items. Tap WhatsApp to order.</p>
+      </div>
+      <div class="alacarte-grid reveal">
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-idli.png" alt="Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Idli (2 Pcs)</div><div class="ac-price">₹40</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Idli%20(2%20Pcs)%20-%20%E2%82%B940%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-sambar-idli.png" alt="Sambar Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Sambar Idli</div><div class="ac-price">₹60</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Sambar%20Idli%20-%20%E2%82%B960%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ghee-podi-idli.png" alt="Ghee Podi Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ghee Podi Idli</div><div class="ac-price">₹50</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Ghee%20Podi%20Idli%20-%20%E2%82%B950%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-plain-dosa.png" alt="Plain Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Plain Dosa</div><div class="ac-price">₹70</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Plain%20Dosa%20-%20%E2%82%B970%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ghee-dosa.png" alt="Ghee Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ghee Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Ghee%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-onion-dosa.png" alt="Onion Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Onion Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Onion%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-rava-dosa.png" alt="Rava Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Rava Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Rava%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-podi-dosa.png" alt="Podi Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Podi Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Podi%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-uthappam.png" alt="Plain Uthappam" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Plain Uthappam</div><div class="ac-price">₹85</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Plain%20Uthappam%20-%20%E2%82%B985%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-onion-dosa.png" alt="Onion Uthappam" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Onion Uthappam</div><div class="ac-price">₹90</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Onion%20Uthappam%20-%20%E2%82%B990%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-parota.png" alt="Parota" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Parota</div><div class="ac-price">₹100</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Parota%20-%20%E2%82%B9100%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-chola-poori.png" alt="Chola Poori" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Chola Poori</div><div class="ac-price">₹100</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Chola%20Poori%20-%20%E2%82%B9100%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-chappathi.png" alt="Chappathi Set" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Chappathi Set</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Chappathi%20Set%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-mushroom-dosa.png" alt="Mushroom Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Mushroom Dosa</div><div class="ac-price">₹120</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Mushroom%20Dosa%20-%20%E2%82%B9120%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-panner-dosa.png" alt="Panner Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Panner Dosa</div><div class="ac-price">₹120</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Panner%20Dosa%20-%20%E2%82%B9120%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ORDER FORM SECTION -->
+<section class="order-section section-pad">
+  <div class="container">
+    <div class="order-info reveal-left">
+      <div class="eyebrow" style="color:var(--gold);">Easy Ordering</div>
+      <h2 style="color:var(--white);margin-top:14px;">Order Your Meal in One Tap</h2>
+      <p>Fill the form and your order goes directly to WhatsApp. Quick, simple, confirmed instantly.</p>
+      <div class="order-steps">
+        <div class="order-step"><div class="step-num">1</div><div class="step-text">Click any "Order on WhatsApp" button on a combo or item</div></div>
+        <div class="order-step"><div class="step-num">2</div><div class="step-text">Fill your name, phone number, date and persons in the popup</div></div>
+        <div class="order-step"><div class="step-num">3</div><div class="step-text">Tap Send - we confirm your order on WhatsApp instantly</div></div>
+      </div>
+      <div class="order-phone">
+        <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        <span>+91 82480 77837</span>
+      </div>
+    </div>
+    <div class="order-form-card reveal-right">
+      <h3>Quick Order Form</h3>
+      <form id="order-form" style="margin-top:20px;">
+        <div class="modal-form-row">
+          <div class="form-group"><label>Your Name</label><input type="text" name="name" class="form-control" placeholder="Enter your name" required /></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control" placeholder="+91 00000 00000" required /></div>
+        </div>
+        <div class="modal-form-row">
+          <div class="form-group"><label>Meal Type</label><select name="meal" class="form-control"><option>Breakfast</option><option>Lunch</option><option>Dinner</option></select></div>
+          <div class="form-group"><label>Plan</label><select name="plan" class="form-control"><option>Regular Plan 1</option><option>Regular Plan 2</option><option>Regular Plan 3</option><option>Vaitheegam Plan 1</option><option>Vaitheegam Plan 2</option><option>À La Carte</option></select></div>
+        </div>
+        <div class="modal-form-row">
+          <div class="form-group"><label>Date</label><input type="date" name="date" class="form-control" /></div>
+          <div class="form-group"><label>Number of Persons</label><input type="number" name="persons" class="form-control" min="1" value="1" /></div>
+        </div>
+        <div class="form-group"><label>Special Requests</label><textarea name="special" class="form-control" rows="3" placeholder="Any dietary needs or special requests..."></textarea></div>
+        <button type="submit" class="form-submit">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Send Order on WhatsApp →
+        </button>
+        <p class="form-note">No registration needed. Order confirmed via WhatsApp directly.</p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer-body">
+      <div class="footer-brand">
+        <div class="f-logo">
+          <img src="assets/images/logo-tsp.png" alt="Sri Skanda Bhavan" />
+          <div><span class="brand">Sri Skanda Bhavan</span><span class="tagline">Live the Life</span></div>
+        </div>
+        <p>Hospitality Rooted in Heritage. Pure vegetarian dining since 1998.</p>
+      </div>
+      <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="rooms.html">Rooms</a></li><li><a href="restaurant.html">Restaurant</a></li><li><a href="contact.html">Contact</a></li></ul></div>
+      <div class="footer-col"><h5>Dining</h5><ul><li><a href="restaurant.html">Breakfast</a></li><li><a href="restaurant.html">Lunch</a></li><li><a href="restaurant.html">Dinner</a></li><li><a href="restaurant.html">Vaitheegam</a></li></ul></div>
+      <div class="footer-col">
+        <h5>Reach Us</h5>
+        <div class="f-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg><a href="tel:+918248077837" style="color:rgba(255,255,255,0.6)">+91 82480 77837</a></div>
+        <div class="f-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Sannathi Street, Thirukkadaiyur – 609311</div>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <span>© 2025 Sri Skanda Bhavan. All rights reserved.</span>
+      <span class="wm">Designed &amp; Developed by <strong>WebMint Solutions</strong></span>
+    </div>
+  </div>
+</footer>
+
+<!-- ORDER MODAL POPUP -->
+<div class="order-modal-overlay" id="orderModalOverlay">
+  <div class="order-modal">
+    <div class="order-modal-header">
+      <div>
+        <h3 id="modal-title">Place Your Order</h3>
+        <span class="plan-tag" id="modal-plan-tag">Select your plan below</span>
+      </div>
+      <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+    </div>
+    <div class="order-modal-body">
+      <form id="modal-order-form">
+        <div class="modal-form-row">
+          <div class="form-group"><label>Your Name *</label><input type="text" id="m-name" class="form-control" placeholder="Enter your name" required /></div>
+          <div class="form-group"><label>Phone Number *</label><input type="tel" id="m-phone" class="form-control" placeholder="+91 00000 00000" required /></div>
+        </div>
+        <div class="modal-form-row">
+          <div class="form-group"><label>Date</label><input type="date" id="m-date" class="form-control" /></div>
+          <div class="form-group"><label>Number of Persons *</label><input type="number" id="m-persons" class="form-control" min="1" value="1" required /></div>
+        </div>
+        <div class="form-group"><label>Special Requests</label><textarea id="m-special" class="form-control" rows="2" placeholder="Any dietary needs or special requests..."></textarea></div>
+        <button type="submit" class="modal-submit-btn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Confirm &amp; Send on WhatsApp →
+        </button>
+        <p class="modal-note">Your order message is sent directly to our WhatsApp. We'll confirm shortly. 🙏</p>
+      </form>
+    </div>
+  </div>
+</div>
+
+<button class="btt" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
+<a class="float-wa" href="https://wa.me/918248077837" target="_blank" aria-label="WhatsApp">
+  <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+</a>
+<div class="lightbox"><span class="lightbox-close">✕</span><img src="" alt="" /></div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+<script src="js/main.js"></script>
+<script>
+/* ── RESTAURANT PAGE SPECIFIC JS ──────────────────────────── */
+(function() {
+  'use strict';
+
+  /* ── ACTIVE TYPE TRACKING ─────────────────────────────── */
+  let activeType = 'regular';
+
+  /* ── MEAL TABS ────────────────────────────────────────── */
+  const mealTabs  = document.querySelectorAll('.meal-tab');
+  const menuSecs  = document.querySelectorAll('.menu-section');
+
+  function showMeal(meal) {
+    mealTabs.forEach(t => t.classList.toggle('active', t.dataset.meal === meal));
+    menuSecs.forEach(s => {
+      if (s.dataset.meal === meal) {
+        s.style.display = 'block';
+        showType(s, activeType);
+      } else {
+        s.style.display = 'none';
+      }
+    });
+  }
+
+  mealTabs.forEach(tab => {
+    tab.addEventListener('click', () => showMeal(tab.dataset.meal));
+  });
+
+  /* ── TYPE TOGGLES ─────────────────────────────────────── */
+  const togRegular    = document.getElementById('tog-regular');
+  const togVaitheegam = document.getElementById('tog-vaitheegam');
+  const togAlacarte   = document.getElementById('tog-alacarte');
+  const allToggles    = [togRegular, togVaitheegam, togAlacarte];
+
+  function showType(section, type) {
+    const typeSecs = section.querySelectorAll('.menu-type-section');
+    typeSecs.forEach(s => {
+      s.style.display = s.dataset.type === type ? 'block' : 'none';
+    });
+  }
+
+  function setToggle(type) {
+    activeType = type;
+    allToggles.forEach(t => t.classList.remove('active'));
+    if (type === 'regular')    togRegular.classList.add('active');
+    if (type === 'vaitheegam') togVaitheegam.classList.add('active');
+    if (type === 'alacarte')   togAlacarte.classList.add('active');
+    // Apply to ALL menu-sections (visible ones will show correct type, hidden ones pre-set for when they appear)
+    menuSecs.forEach(s => showType(s, type));
+  }
+
+  togRegular?.addEventListener('click',    () => setToggle('regular'));
+  togVaitheegam?.addEventListener('click', () => setToggle('vaitheegam'));
+  togAlacarte?.addEventListener('click',   () => setToggle('alacarte'));
+
+  /* ── INIT: show breakfast + regular ──────────────────── */
+  menuSecs.forEach(s => { s.style.display = 'none'; });
+  const breakfastSec = document.querySelector('.menu-section[data-meal="breakfast"]');
+  if (breakfastSec) {
+    breakfastSec.style.display = 'block';
+    showType(breakfastSec, 'regular');
+  }
+  togRegular?.classList.add('active');
+
+  /* ── COMBO "SHOW MORE / LESS" ─────────────────────────── */
+  document.querySelectorAll('.combo-more-btn').forEach(btn => {
+    const ul    = btn.previousElementSibling;
+    const items = ul.querySelectorAll('li');
+    const MAX   = 6;
+    if (items.length <= MAX) { btn.style.display = 'none'; return; }
+    items.forEach((li, i) => { if (i >= MAX) li.style.display = 'none'; });
+    btn.textContent = `+ ${items.length - MAX} more items →`;
+    btn.addEventListener('click', () => {
+      const isHidden = [...items].some(li => li.style.display === 'none');
+      if (isHidden) {
+        items.forEach(li => li.style.display = '');
+        btn.textContent = '− Show less';
+      } else {
+        items.forEach((li, i) => { if (i >= MAX) li.style.display = 'none'; });
+        btn.textContent = `+ ${items.length - MAX} more items →`;
+      }
+    });
+  });
+
+  /* ── ORDER MODAL ──────────────────────────────────────── */
+  const overlay   = document.getElementById('orderModalOverlay');
+  const closeBtn  = document.getElementById('modalCloseBtn');
+  const modalForm = document.getElementById('modal-order-form');
+  const modalTitle = document.getElementById('modal-title');
+  const modalTag  = document.getElementById('modal-plan-tag');
+
+  let currentPlan = '', currentPrice = '', currentMeal = '';
+
+  function openModal(plan, price, meal) {
+    currentPlan  = plan;
+    currentPrice = price;
+    currentMeal  = meal;
+    modalTitle.textContent = `Order: ${plan}`;
+    modalTag.textContent   = `${meal} · ${price} per person`;
+    overlay.classList.add('open');
+    document.body.style.overflow = 'hidden';
+    // Set today as default date
+    const today = new Date().toISOString().split('T')[0];
+    document.getElementById('m-date').value = today;
+    document.getElementById('m-name').focus();
+  }
+
+  function closeModal() {
+    overlay.classList.remove('open');
+    document.body.style.overflow = '';
+    modalForm.reset();
+  }
+
+  closeBtn?.addEventListener('click', closeModal);
+  overlay?.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
+
+  /* Open modal from combo cards */
+  document.querySelectorAll('.open-order-modal').forEach(btn => {
+    btn.addEventListener('click', () => {
+      openModal(btn.dataset.plan, btn.dataset.price, btn.dataset.meal || 'Meal');
+    });
+  });
+
+  /* Modal form submit → WhatsApp */
+  modalForm?.addEventListener('submit', e => {
+    e.preventDefault();
+    const name    = document.getElementById('m-name').value.trim();
+    const phone   = document.getElementById('m-phone').value.trim();
+    const date    = document.getElementById('m-date').value;
+    const persons = document.getElementById('m-persons').value;
+    const special = document.getElementById('m-special').value.trim();
+
+    if (!name || !phone) {
+      alert('Please enter your name and phone number.');
+      return;
+    }
+
+    const dateStr = date ? new Date(date).toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' }) : 'To be confirmed';
+
+    const msg = `🙏 *Sri Skanda Bhavan - Meal Order*\n\n` +
+      `📋 *Order Details:*\n` +
+      `Plan: ${currentPlan}\n` +
+      `Meal: ${currentMeal}\n` +
+      `Price: ${currentPrice} per person\n\n` +
+      `👤 *Customer Details:*\n` +
+      `Name: ${name}\n` +
+      `Phone: ${phone}\n` +
+      `Date: ${dateStr}\n` +
+      `Persons: ${persons}\n` +
+      (special ? `Special Requests: ${special}\n` : '') +
+      `\nPlease confirm this order. Thank you! 🙏`;
+
+    window.open(`https://wa.me/918248077837?text=${encodeURIComponent(msg)}`, '_blank');
+    closeModal();
+  });
+
+  /* ── STATIC ORDER FORM (bottom section) ───────────────── */
+  document.getElementById('order-form')?.addEventListener('submit', e => {
+    e.preventDefault();
+    const f = e.target;
+    const name    = f.querySelector('[name="name"]').value.trim();
+    const phone   = f.querySelector('[name="phone"]').value.trim();
+    const meal    = f.querySelector('[name="meal"]').value;
+    const plan    = f.querySelector('[name="plan"]').value;
+    const date    = f.querySelector('[name="date"]').value;
+    const persons = f.querySelector('[name="persons"]').value;
+    const special = f.querySelector('[name="special"]').value.trim();
+
+    if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+
+    const dateStr = date ? new Date(date).toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' }) : 'To be confirmed';
+
+    const msg = `🙏 *Sri Skanda Bhavan - Meal Order*\n\n` +
+      `📋 *Order Details:*\n` +
+      `Meal: ${meal}\n` +
+      `Plan: ${plan}\n\n` +
+      `👤 *Customer Details:*\n` +
+      `Name: ${name}\n` +
+      `Phone: ${phone}\n` +
+      `Date: ${dateStr}\n` +
+      `Persons: ${persons}\n` +
+      (special ? `Special Requests: ${special}\n` : '') +
+      `\nPlease confirm this order. Thank you! 🙏`;
+
+    window.open(`https://wa.me/918248077837?text=${encodeURIComponent(msg)}`, '_blank');
+  });
+
+})();
+</script>
+</body>
+</html>
