@@ -3,129 +3,210 @@
 <head>
 <meta charset="UTF-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<title>Restaurant & Dining Menu - Sri Skanda Bhavan | Breakfast, Lunch, Dinner & Vaitheegam</title>
-<meta name="description" content="Authentic South Indian pure vegetarian meals at Sri Skanda Bhavan. Regular combos, Vaitheegam (no onion no garlic), and à la carte. WhatsApp ordering." />
+
+<!-- ═══ PRIMARY SEO ═══ -->
+<title>Restaurant &amp; Dining Menu | Sri Skanda Bhavan Thirukkadaiyur - South Indian Pure Veg</title>
+<meta name="description" content="Authentic South Indian pure vegetarian restaurant at Sri Skanda Bhavan, Thirukkadaiyur. Breakfast, Lunch &amp; Dinner combo meals from ₹149. Vaitheegam (no onion, no garlic) thali available. Order on WhatsApp +91 82480 77837." />
+<meta name="keywords" content="Sri Skanda Bhavan restaurant, Thirukkadaiyur hotel food, South Indian vegetarian restaurant, Vaitheegam food, banana leaf lunch Thirukkadaiyur, pure veg hotel near Amirthakadeshwarar temple, breakfast lunch dinner combos, idli dosa pongal Thirukkadaiyur" />
+<link rel="canonical" href="https://srishandabhavan.in/restaurant.html" />
+
+<!-- ═══ OPEN GRAPH ═══ -->
+<meta property="og:type" content="restaurant" />
+<meta property="og:title" content="Sri Skanda Bhavan - Authentic South Indian Dining, Thirukkadaiyur" />
+<meta property="og:description" content="Pure vegetarian meals - Regular combos from ₹149, Vaitheegam (no onion/garlic) thali, and fresh à la carte. Order directly on WhatsApp." />
+<meta property="og:image" content="assets/images/skanda-food-hero.png" />
+<meta property="og:url" content="https://srishandabhavan.in/restaurant.html" />
+<meta property="og:site_name" content="Sri Skanda Bhavan" />
+
+<!-- ═══ TWITTER CARD ═══ -->
+<meta name="twitter:card" content="summary_large_image" />
+<meta name="twitter:title" content="Sri Skanda Bhavan - South Indian Pure Veg Restaurant, Thirukkadaiyur" />
+<meta name="twitter:description" content="Breakfast, Lunch &amp; Dinner combos. Vaitheegam (Saatvik) meals. Fresh à la carte. Order on WhatsApp." />
+<meta name="twitter:image" content="assets/images/skanda-food-hero.png" />
+
+<!-- ═══ GEO ═══ -->
+<meta name="geo.region" content="IN-TN" />
+<meta name="geo.placename" content="Thirukkadaiyur, Tamil Nadu, India" />
+<meta name="geo.position" content="11.3667;79.8583" />
+<meta name="ICBM" content="11.3667, 79.8583" />
+
+<!-- ═══ LOCAL BUSINESS SCHEMA ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Restaurant",
+  "name": "Sri Skanda Bhavan",
+  "description": "Authentic South Indian pure vegetarian restaurant offering Regular combos, Vaitheegam (Saatvik) meals and à la carte dishes near Amirthakadeshwarar Temple, Thirukkadaiyur.",
+  "url": "https://srishandabhavan.in/restaurant.html",
+  "image": "assets/images/skanda-food-hero.png",
+  "telephone": "+918248077837",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "Sannathi Street",
+    "addressLocality": "Thirukkadaiyur",
+    "addressRegion": "Tamil Nadu",
+    "postalCode": "609311",
+    "addressCountry": "IN"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 11.3667,
+    "longitude": 79.8583
+  },
+  "servesCuisine": ["South Indian", "Tamil", "Vegetarian", "Saatvik"],
+  "priceRange": "₹149 – ₹349",
+  "hasMenu": "https://srishandabhavan.in/restaurant.html",
+  "openingHoursSpecification": [
+    {"@type":"OpeningHoursSpecification","dayOfWeek":["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],"opens":"06:00","closes":"22:00"}
+  ],
+  "menu": "https://srishandabhavan.in/restaurant.html",
+  "acceptsReservations": "True"
+}
+</script>
+
+<!-- ═══ MENU ITEM SCHEMA ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Menu",
+  "name": "Sri Skanda Bhavan Dining Menu",
+  "hasMenuSection": [
+    {
+      "@type": "MenuSection",
+      "name": "Breakfast Combos",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"Breakfast Plan 1","offers":{"@type":"Offer","price":"159","priceCurrency":"INR"}},
+        {"@type":"MenuItem","name":"Breakfast Plan 2","offers":{"@type":"Offer","price":"199","priceCurrency":"INR"}},
+        {"@type":"MenuItem","name":"Breakfast Plan 3","offers":{"@type":"Offer","price":"249","priceCurrency":"INR"}}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Lunch Combos",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"Lunch Plan 1","offers":{"@type":"Offer","price":"160","priceCurrency":"INR"}},
+        {"@type":"MenuItem","name":"Lunch Plan 2","offers":{"@type":"Offer","price":"269","priceCurrency":"INR"}},
+        {"@type":"MenuItem","name":"Lunch Plan 3","offers":{"@type":"Offer","price":"349","priceCurrency":"INR"}}
+      ]
+    },
+    {
+      "@type": "MenuSection",
+      "name": "Dinner Combos",
+      "hasMenuItem": [
+        {"@type":"MenuItem","name":"Dinner Plan 1","offers":{"@type":"Offer","price":"149","priceCurrency":"INR"}},
+        {"@type":"MenuItem","name":"Dinner Plan 2","offers":{"@type":"Offer","price":"199","priceCurrency":"INR"}},
+        {"@type":"MenuItem","name":"Dinner Plan 3","offers":{"@type":"Offer","price":"249","priceCurrency":"INR"}}
+      ]
+    }
+  ]
+}
+</script>
+
+<!-- ═══ BREADCRUMB SCHEMA ═══ -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "BreadcrumbList",
+  "itemListElement": [
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://srishandabhavan.in/"},
+    {"@type":"ListItem","position":2,"name":"Restaurant","item":"https://srishandabhavan.in/restaurant.html"}
+  ]
+}
+</script>
+
 <link rel="icon" href="assets/images/logo.PNG" />
+<link rel="apple-touch-icon" href="assets/images/logo.PNG" />
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" />
 <link rel="stylesheet" href="css/style.css" />
 <style>
-/* ── ORDER MODAL ─────────────────────────────────────────── */
-.order-modal-overlay {
-  position: fixed; inset: 0;
-  background: rgba(26,26,46,0.82);
-  backdrop-filter: blur(8px);
-  z-index: 8000;
-  display: flex; align-items: center; justify-content: center;
-  padding: 20px;
-  opacity: 0; pointer-events: none;
-  transition: opacity 0.3s;
-}
-.order-modal-overlay.open { opacity: 1; pointer-events: all; }
+/* ═══════════ COMBO CARD WITH IMAGE ═══════════ */
+.combo-card{background:var(--card-bg);border:1px solid var(--divider);border-radius:var(--r-lg);overflow:hidden;display:flex;flex-direction:column;transition:transform var(--dur) var(--ease),box-shadow var(--dur)}
+.combo-card:hover{transform:translateY(-5px);box-shadow:var(--sh-lg)}
+.combo-thumb{width:100%;aspect-ratio:16/9;overflow:hidden;position:relative}
+.combo-thumb img{width:100%;height:100%;object-fit:cover;transition:transform .45s var(--ease)}
+.combo-card:hover .combo-thumb img{transform:scale(1.05)}
+.combo-thumb-overlay{position:absolute;inset:0;background:linear-gradient(to bottom,transparent 40%,rgba(0,0,0,.55) 100%)}
+.combo-thumb-price{position:absolute;bottom:12px;right:14px;font-family:var(--font-h);font-size:1.5rem;color:#fff;line-height:1;text-shadow:0 2px 8px rgba(0,0,0,.4)}
+.combo-thumb-badge{position:absolute;top:12px;left:12px;font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;padding:4px 12px;border-radius:20px;color:#fff;backdrop-filter:blur(6px);background:rgba(0,0,0,.35);border:1px solid rgba(255,255,255,.2)}
 
-.order-modal {
-  background: var(--card-bg);
-  border-radius: var(--r-xl);
-  width: 100%; max-width: 560px;
-  max-height: 90vh;
-  overflow-y: auto;
-  box-shadow: 0 24px 80px rgba(0,0,0,0.35);
-  transform: scale(0.94) translateY(20px);
-  transition: transform 0.3s var(--ease);
-}
-.order-modal-overlay.open .order-modal { transform: scale(1) translateY(0); }
+.combo-hd{padding:16px 20px 12px;display:flex;justify-content:space-between;align-items:flex-start}
+.combo-plan-name{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;opacity:.7;font-family:var(--font-b)}
+.combo-plan-title{font-family:var(--font-h);font-size:1.15rem;margin-top:2px;color:var(--text-dark)}
+.combo-plan-price{font-family:var(--font-h);font-size:1.5rem;color:var(--gold);line-height:1}
 
-.order-modal-header {
-  background: var(--navy);
-  padding: 22px 28px;
-  border-radius: var(--r-xl) var(--r-xl) 0 0;
-  display: flex; align-items: center; justify-content: space-between;
-}
-.order-modal-header h3 { color: var(--white); font-size: 1.2rem; margin: 0; }
-.order-modal-header .plan-tag {
-  font-size: 0.72rem; color: var(--gold); letter-spacing: 0.08em;
-  text-transform: uppercase; margin-top: 3px; display: block;
-}
-.modal-close-btn {
-  width: 34px; height: 34px; border-radius: 50%;
-  background: rgba(255,255,255,0.1);
-  border: none; color: white; font-size: 1.2rem;
-  cursor: pointer; display: flex; align-items: center; justify-content: center;
-  transition: background 0.2s; flex-shrink: 0;
-}
-.modal-close-btn:hover { background: rgba(255,255,255,0.2); }
+.combo-body{padding:0 20px 8px;flex:1}
+.items-label{font-size:.65rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text-light);margin-bottom:8px}
+.combo-items{list-style:none}
+.combo-items li{display:flex;align-items:flex-start;gap:7px;font-size:.84rem;color:var(--text-dark);line-height:1.85}
+.combo-items li::before{content:'•';color:var(--gold);flex-shrink:0;margin-top:1px}
+.combo-more-btn{background:none;border:none;color:var(--teal);font-size:.78rem;cursor:pointer;padding:4px 0;font-family:var(--font-b);margin-top:4px;transition:color .2s}
+.combo-more-btn:hover{color:var(--teal-dark)}
+.combo-ft{padding:0}
+.combo-ft .btn{width:100%;justify-content:center;border-radius:0 0 var(--r-lg) var(--r-lg);padding:13px;font-size:.82rem}
 
-.order-modal-body { padding: 28px; }
-.order-modal-body .form-group { margin-bottom: 16px; }
-.order-modal-body label {
-  display: block; font-size: 0.76rem;
-  color: var(--text-mid); margin-bottom: 5px; letter-spacing: 0.04em;
-}
-.order-modal-body .form-control {
-  width: 100%; padding: 11px 15px;
-  border: 1px solid var(--divider);
-  border-radius: var(--r-sm);
-  background: var(--white);
-  font-family: var(--font-b); font-size: 0.9rem; color: var(--text-dark);
-  transition: border-color 0.2s, box-shadow 0.2s;
-  appearance: none;
-}
-.order-modal-body .form-control:focus {
-  outline: none; border-color: var(--gold);
-  box-shadow: 0 0 0 3px rgba(249,168,37,0.14);
-}
-.modal-form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 14px; }
-@media (max-width:480px) { .modal-form-row { grid-template-columns: 1fr; } }
+/* ═══════════ AC CARD WITH DESCRIPTION ═══════════ */
+.ac-card{background:var(--card-bg);border:1px solid var(--divider);border-radius:var(--r-md);overflow:hidden;transition:transform var(--dur),box-shadow var(--dur),border-color var(--dur);display:flex;flex-direction:column}
+.ac-card:hover{transform:translateY(-4px);box-shadow:var(--sh-md);border-color:var(--gold)}
+.ac-img{aspect-ratio:1/1;overflow:hidden}
+.ac-img img{width:100%;height:100%;object-fit:cover;transition:transform .35s}
+.ac-card:hover .ac-img img{transform:scale(1.06)}
+.ac-body{padding:11px 13px 4px}
+.ac-name{font-size:.82rem;font-family:var(--font-b);color:var(--text-dark);font-weight:500;margin-bottom:3px}
+.ac-desc{font-size:.72rem;color:var(--text-mid);line-height:1.55;margin-bottom:6px}
+.ac-price{font-family:var(--font-h);font-size:1.1rem;color:var(--gold);margin-bottom:2px}
+.ac-wa{display:none!important}
+.ac-btn{display:flex;align-items:center;justify-content:center;gap:6px;width:calc(100% - 24px);margin:0 12px 12px;padding:8px 10px;background:var(--whatsapp);color:#fff;border:none;border-radius:var(--r-sm);font-family:var(--font-b);font-size:.72rem;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;transition:background .2s,transform .2s;flex-shrink:0}
+.ac-btn:hover{background:#1aad4e;transform:translateY(-1px)}
 
-.modal-submit-btn {
-  width: 100%; padding: 14px;
-  background: var(--whatsapp); color: white;
-  border: none; border-radius: var(--r-sm);
-  font-family: var(--font-b); font-size: 0.88rem;
-  letter-spacing: 0.07em; text-transform: uppercase;
-  cursor: pointer; margin-top: 8px;
-  display: flex; align-items: center; justify-content: center; gap: 9px;
-  transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-}
-.modal-submit-btn:hover {
-  background: #1DA851;
-  transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(37,211,102,0.38);
-}
-.modal-note {
-  text-align: center; font-size: 0.72rem;
-  color: var(--text-light); margin-top: 10px;
-}
+/* ═══════════ ORDER MODAL ═══════════ */
+.om-overlay{position:fixed;inset:0;background:rgba(26,26,46,.88);backdrop-filter:blur(10px);z-index:9000;display:flex;align-items:center;justify-content:center;padding:16px;opacity:0;pointer-events:none;transition:opacity .3s}
+.om-overlay.open{opacity:1;pointer-events:all}
+.om-box{background:var(--card-bg);border-radius:var(--r-xl);width:100%;max-width:540px;max-height:92vh;overflow-y:auto;box-shadow:0 32px 80px rgba(0,0,0,.4);transform:translateY(24px) scale(.96);transition:transform .32s cubic-bezier(.4,0,.2,1)}
+.om-overlay.open .om-box{transform:translateY(0) scale(1)}
+.om-hd{background:var(--navy);padding:22px 28px 20px;border-radius:var(--r-xl) var(--r-xl) 0 0;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;border-bottom:2px solid rgba(249,168,37,.25)}
+.om-hd h3{font-family:var(--font-h);font-size:1.15rem;color:#fff;margin:0 0 3px}
+.om-tag{font-size:.7rem;color:var(--gold);letter-spacing:.1em;text-transform:uppercase;display:block}
+.om-price{font-family:var(--font-h);font-size:1.5rem;color:var(--gold);line-height:1;margin-top:6px;display:block}
+.om-x{width:32px;height:32px;border-radius:50%;background:rgba(255,255,255,.1);border:none;color:#fff;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0;transition:background .2s}
+.om-x:hover{background:rgba(255,255,255,.2)}
+.om-body{padding:28px}
+.om-row{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:480px){.om-row{grid-template-columns:1fr}}
+.om-g{margin-bottom:16px}
+.om-g label{display:block;font-size:.74rem;color:var(--text-mid);margin-bottom:5px;letter-spacing:.04em}
+.om-inp{width:100%;padding:11px 15px;border:1px solid var(--divider);border-radius:var(--r-sm);background:#fff;font-family:var(--font-b);font-size:.9rem;color:var(--text-dark);transition:border-color .2s,box-shadow .2s;appearance:none}
+.om-inp:focus{outline:none;border-color:var(--gold);box-shadow:0 0 0 3px rgba(249,168,37,.14)}
+select.om-inp{background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath fill='none' stroke='%239A9AB0' stroke-width='1.5' d='M1 1l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 13px center;padding-right:34px}
+.om-err{color:var(--coral);font-size:.78rem;margin-bottom:10px;display:none}
+.om-send{width:100%;padding:14px 20px;background:var(--whatsapp);color:#fff;border:none;border-radius:var(--r-sm);font-family:var(--font-b);font-size:.88rem;letter-spacing:.06em;text-transform:uppercase;cursor:pointer;margin-top:8px;display:flex;align-items:center;justify-content:center;gap:9px;transition:background .2s,transform .2s,box-shadow .2s}
+.om-send:hover{background:#1aad4e;transform:translateY(-2px);box-shadow:0 6px 24px rgba(37,211,102,.38)}
+.om-note{text-align:center;font-size:.71rem;color:var(--text-light);margin-top:10px;line-height:1.5}
 
-/* ── COMBO CARD BTN full-width fix ──────────────────────── */
-.combo-ft .btn { width: 100%; justify-content: center; border-radius: 0 0 var(--r-lg) var(--r-lg); padding: 13px; font-size: 0.82rem; }
-
-/* type-section display controlled by JS only */
-
-
+/* ═══════════ RESPONSIVE ═══════════ */
+@media(max-width:768px){.combo-thumb-price{font-size:1.25rem}.combo-plan-title{font-size:1rem}.combo-plan-price{font-size:1.25rem}}
 </style>
 </head>
 <body>
-
 <!-- NAVBAR -->
-<nav class="navbar">
+<nav class="navbar" aria-label="Main Navigation">
   <div class="container">
     <a href="index.html" class="nav-logo">
-      <img src="assets/images/logo-tsp.png" alt="Sri Skanda Bhavan" />
+      <img src="assets/images/logo-tsp.png" alt="Sri Skanda Bhavan Logo" width="40" height="40" />
       <div class="nav-logo-text"><span class="brand">Sri Skanda Bhavan</span><span class="tagline">Live the Life</span></div>
     </a>
-    <ul class="nav-links">
+    <ul class="nav-links" role="list">
       <li><a href="index.html">Home</a></li>
       <li><a href="rooms.html">Rooms</a></li>
-      <li><a href="restaurant.html" class="active">Restaurant</a></li>
+      <li><a href="restaurant.html" class="active" aria-current="page">Restaurant</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
     <a href="contact.html" class="btn btn-primary nav-cta btn-sm">Book Now</a>
-    <div class="nav-ham"><span></span><span></span><span></span></div>
+    <div class="nav-ham" aria-label="Open menu" role="button" tabindex="0"><span></span><span></span><span></span></div>
   </div>
 </nav>
 <div class="nav-overlay"></div>
-<div class="nav-drawer">
-  <span class="nav-drawer-close">✕</span>
+<div class="nav-drawer" role="dialog" aria-label="Mobile Navigation">
+  <span class="nav-drawer-close" role="button" tabindex="0" aria-label="Close menu">&#10005;</span>
   <nav class="drawer-links">
     <a href="index.html">Home</a><a href="rooms.html">Rooms</a>
     <a href="restaurant.html" class="active">Restaurant</a><a href="contact.html">Contact</a>
@@ -134,101 +215,129 @@
 </div>
 
 <!-- HERO -->
-<section class="rest-hero">
-  <div class="rest-hero-bg"><img src="assets/images/skanda-food-hero.png" alt="South Indian Dining" /></div>
+<section class="rest-hero" aria-label="Restaurant Hero">
+  <div class="rest-hero-bg">
+    <img src="assets/images/skanda-food-hero.png" alt="Authentic South Indian Banana Leaf Dining at Sri Skanda Bhavan Thirukkadaiyur" loading="eager" />
+  </div>
   <div class="rest-hero-overlay"></div>
   <div class="rest-hero-content">
     <div class="container">
       <h1>Authentic South Indian <em>Dining Experience</em></h1>
-      <p>Pure vegetarian meals - hearty combos, traditional Vaitheegam (no onion, no garlic) cuisine, and fresh à la carte dishes.</p>
+      <p>Pure vegetarian meals prepared with devotion - hearty combo plans, traditional Vaitheegam cuisine, and fresh à la carte dishes near the sacred Amirthakadeshwarar Temple.</p>
       <div class="rest-badges">
-        <span class="rest-badge">100% Pure Veg</span>
-        <span class="rest-badge">Vaitheegam Available</span>
-        <span class="rest-badge">Banana Leaf Combos</span>
+        <span class="rest-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+          100% Pure Vegetarian
+        </span>
+        <span class="rest-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+          Vaitheegam Available
+        </span>
+        <span class="rest-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 11l19-9-9 19-2-8-8-2z"/></svg>
+          Banana Leaf Combos
+        </span>
+        <span class="rest-badge">
+          <svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/></svg>
+          Open 6 AM – 10 PM
+        </span>
       </div>
     </div>
   </div>
 </section>
 
 <!-- STICKY TABS -->
-<div class="menu-tabs-bar" id="menu">
+<div class="menu-tabs-bar" id="menu" role="navigation" aria-label="Menu categories">
   <div class="menu-tabs-inner">
-    <div class="meal-tabs">
-      <button class="meal-tab active" data-meal="breakfast">Breakfast</button>
-      <button class="meal-tab" data-meal="lunch">Lunch</button>
-      <button class="meal-tab" data-meal="dinner">Dinner</button>
+    <div class="meal-tabs" role="tablist">
+      <button class="meal-tab active" data-meal="breakfast" role="tab" aria-selected="true">Breakfast</button>
+      <button class="meal-tab" data-meal="lunch" role="tab" aria-selected="false">Lunch</button>
+      <button class="meal-tab" data-meal="dinner" role="tab" aria-selected="false">Dinner</button>
     </div>
-    <div class="type-toggles">
+    <div class="type-toggles" role="group" aria-label="Meal type">
       <button class="type-toggle" id="tog-regular">Regular</button>
       <button class="type-toggle" id="tog-vaitheegam">Vaitheegam</button>
-      <button class="type-toggle" id="tog-alacarte">À La Carte</button>
+      <button class="type-toggle" id="tog-alacarte">&#192; La Carte</button>
     </div>
   </div>
 </div>
-
-<!-- ══════════════ BREAKFAST ══════════════ -->
-<div class="menu-section active" data-meal="breakfast">
+<!-- ═══════════════════ BREAKFAST ═══════════════════ -->
+<div class="menu-section" data-meal="breakfast" role="tabpanel">
   <div class="container" style="padding-top:64px;padding-bottom:80px;">
 
     <!-- Regular Breakfast -->
     <div class="menu-type-section" data-type="regular">
       <div class="mb-8 reveal">
         <div class="menu-sub-label">Regular Breakfast Combos</div>
-        <h3>Breakfast Combos</h3>
-        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Start your morning right - freshly prepared, served with love.</p>
+        <h2 style="font-size:clamp(1.3rem,2.4vw,1.85rem);">Breakfast Combos</h2>
+        <p style="font-size:.92rem;max-width:520px;margin-top:8px;">Start your morning right - freshly prepared every day, served with love and devotion. Three hearty plans to suit every appetite.</p>
       </div>
       <div class="combo-grid">
-        <!-- B-Plan 1 -->
         <div class="combo-card reveal d1">
-          <div class="combo-hd" style="background:#26A69A;">
-            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Breakfast Plan 1</div></div>
-            <div class="combo-plan-price">₹159</div>
+          <div class="combo-thumb">
+            <img src="assets/images/skanda-combo-breakfast-1.png" alt="Breakfast Plan 1 - Sri Skanda Bhavan Breakfast" loading="lazy" />
+            <div class="combo-thumb-overlay"></div>
+            <span class="combo-thumb-badge" style="background:#26A69Acc;">Regular Meal</span>
+            <span class="combo-thumb-price">&#8377;159</span>
+          </div>
+          <div class="combo-hd">
+            <div><div class="combo-plan-name" style="color:#26A69A;">Regular Meal</div><div class="combo-plan-title">Breakfast Plan 1</div></div>
           </div>
           <div class="combo-body">
             <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal</li>
-              <li>Poori (1) with Poori Masal</li><li>Medu Vadai</li>
-              <li>Chutney (2 varieties)</li><li>Sambar</li><li>Filter Coffee</li>
-            </ul>
+            <ul class="combo-items"><li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal</li><li>Poori (1) with Poori Masal</li><li>Medu Vadai</li><li>Chutney (2 varieties)</li><li>Sambar</li><li>Filter Coffee</li></ul>
             <button class="combo-more-btn"></button>
           </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Breakfast Plan 1" data-price="₹159" data-meal="Breakfast">📱 Order on WhatsApp</button></div>
+          <div class="combo-ft">
+            <button class="btn btn-whatsapp open-om" data-plan="Breakfast Plan 1" data-price="159" data-meal="Breakfast">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              Order on WhatsApp
+            </button>
+          </div>
         </div>
-        <!-- B-Plan 2 -->
         <div class="combo-card reveal d2">
-          <div class="combo-hd" style="background:#F9A825;">
-            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Breakfast Plan 2</div></div>
-            <div class="combo-plan-price">₹199</div>
+          <div class="combo-thumb">
+            <img src="assets/images/skanda-combo-breakfast-2.png" alt="Breakfast Plan 2 - Sri Skanda Bhavan Breakfast" loading="lazy" />
+            <div class="combo-thumb-overlay"></div>
+            <span class="combo-thumb-badge" style="background:#F9A825cc;">Regular Meal</span>
+            <span class="combo-thumb-price">&#8377;199</span>
+          </div>
+          <div class="combo-hd">
+            <div><div class="combo-plan-name" style="color:#F9A825;">Regular Meal</div><div class="combo-plan-title">Breakfast Plan 2</div></div>
           </div>
           <div class="combo-body">
             <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal / Rava Pongal</li>
-              <li>Poori &amp; Masal</li><li>Uththappam / Idiyappam with Kadappa</li>
-              <li>Chutney (2 varieties)</li><li>Sambar</li><li>Coffee</li>
-            </ul>
+            <ul class="combo-items"><li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal / Rava Pongal</li><li>Poori &amp; Masal</li><li>Uththappam / Idiyappam with Kadappa</li><li>Chutney (2 varieties)</li><li>Sambar</li><li>Coffee</li></ul>
             <button class="combo-more-btn"></button>
           </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Breakfast Plan 2" data-price="₹199" data-meal="Breakfast">📱 Order on WhatsApp</button></div>
+          <div class="combo-ft">
+            <button class="btn btn-whatsapp open-om" data-plan="Breakfast Plan 2" data-price="199" data-meal="Breakfast">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              Order on WhatsApp
+            </button>
+          </div>
         </div>
-        <!-- B-Plan 3 -->
         <div class="combo-card reveal d3">
-          <div class="combo-hd" style="background:#EF5350;">
-            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Breakfast Plan 3</div></div>
-            <div class="combo-plan-price">₹249</div>
+          <div class="combo-thumb">
+            <img src="assets/images/skanda-combo-breakfast-3.png" alt="Breakfast Plan 3 - Sri Skanda Bhavan Breakfast" loading="lazy" />
+            <div class="combo-thumb-overlay"></div>
+            <span class="combo-thumb-badge" style="background:#EF5350cc;">Regular Meal</span>
+            <span class="combo-thumb-price">&#8377;249</span>
+          </div>
+          <div class="combo-hd">
+            <div><div class="combo-plan-name" style="color:#EF5350;">Regular Meal</div><div class="combo-plan-title">Breakfast Plan 3</div></div>
           </div>
           <div class="combo-body">
             <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Kaasi Halwa</li><li>Panner Jamun</li><li>Idli (2)</li>
-              <li>Ven Pongal with Chidambaram Kosthu</li><li>Poori (1) with Poori Masal</li>
-              <li>Mini Masala Dosa</li><li>Sambar Vadi</li>
-              <li>Chutney (2 varieties)</li><li>Sambar</li><li>Coffee</li>
-            </ul>
+            <ul class="combo-items"><li>Kaasi Halwa</li><li>Panner Jamun</li><li>Idli (2)</li><li>Ven Pongal with Chidambaram Kosthu</li><li>Poori (1) with Poori Masal</li><li>Mini Masala Dosa</li><li>Sambar Vadi</li><li>Chutney (2 varieties)</li><li>Sambar</li><li>Coffee</li></ul>
             <button class="combo-more-btn"></button>
           </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Breakfast Plan 3" data-price="₹249" data-meal="Breakfast">📱 Order on WhatsApp</button></div>
+          <div class="combo-ft">
+            <button class="btn btn-whatsapp open-om" data-plan="Breakfast Plan 3" data-price="249" data-meal="Breakfast">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              Order on WhatsApp
+            </button>
+          </div>
         </div>
       </div>
     </div>
@@ -236,468 +345,647 @@
     <!-- Vaitheegam Breakfast -->
     <div class="menu-type-section" data-type="vaitheegam">
       <div class="mb-8 reveal">
-        <span class="vaitheegam-badge">Vaitheegam - No Onion · No Garlic · Pure Saatvik</span>
-        <h3 style="margin-top:8px;">Vaitheegam Breakfast</h3>
-        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Traditionally prepared for those who follow pure Saatvik practices.</p>
+        <span class="vaitheegam-badge">Vaitheegam &mdash; No Onion &middot; No Garlic &middot; Pure Saatvik</span>
+        <h2 style="font-size:clamp(1.3rem,2.4vw,1.85rem);margin-top:10px;">Vaitheegam Breakfast</h2>
+        <p style="font-size:.92rem;max-width:520px;margin-top:8px;">Traditionally prepared for those who follow pure Saatvik practices - no onion, no garlic, deeply nourishing.</p>
       </div>
       <div class="combo-grid combo-2">
         <div class="combo-card reveal d1">
-          <div class="combo-hd" style="background:#66BB6A;">
-            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Breakfast Plan 1</div></div>
-            <div class="combo-plan-price">₹199</div>
+          <div class="combo-thumb">
+            <img src="assets/images/skanda-vaitheegam-breakfast-1.png" alt="Vaitheegam Breakfast Plan 1 - Sri Skanda Bhavan Breakfast" loading="lazy" />
+            <div class="combo-thumb-overlay"></div>
+            <span class="combo-thumb-badge" style="background:#66BB6Acc;">Vaitheegam</span>
+            <span class="combo-thumb-price">&#8377;199</span>
+          </div>
+          <div class="combo-hd">
+            <div><div class="combo-plan-name" style="color:#66BB6A;">Vaitheegam</div><div class="combo-plan-title">Vaitheegam Breakfast Plan 1</div></div>
           </div>
           <div class="combo-body">
             <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal</li>
-              <li>Medu Vadai</li><li>Chutney (2 varieties)</li><li>Sambar</li><li>Filter Coffee</li>
-            </ul>
+            <ul class="combo-items"><li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal</li><li>Medu Vadai</li><li>Chutney (2 varieties)</li><li>Sambar</li><li>Filter Coffee</li></ul>
             <button class="combo-more-btn"></button>
           </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Breakfast Plan 1" data-price="₹199" data-meal="Breakfast">📱 Order on WhatsApp</button></div>
+          <div class="combo-ft">
+            <button class="btn btn-whatsapp open-om" data-plan="Vaitheegam Breakfast Plan 1" data-price="199" data-meal="Breakfast">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              Order on WhatsApp
+            </button>
+          </div>
         </div>
         <div class="combo-card reveal d2">
-          <div class="combo-hd" style="background:#43A047;">
-            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Breakfast Plan 2</div></div>
-            <div class="combo-plan-price">₹249</div>
+          <div class="combo-thumb">
+            <img src="assets/images/skanda-vaitheegam-breakfast-2.png" alt="Vaitheegam Breakfast Plan 2 - Sri Skanda Bhavan Breakfast" loading="lazy" />
+            <div class="combo-thumb-overlay"></div>
+            <span class="combo-thumb-badge" style="background:#43A047cc;">Vaitheegam</span>
+            <span class="combo-thumb-price">&#8377;249</span>
+          </div>
+          <div class="combo-hd">
+            <div><div class="combo-plan-name" style="color:#43A047;">Vaitheegam</div><div class="combo-plan-title">Vaitheegam Breakfast Plan 2</div></div>
           </div>
           <div class="combo-body">
             <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal / Rava Pongal</li>
-              <li>Poori &amp; Masal</li><li>Uththappam / Idiyappam with Kadappa</li>
-              <li>Chutney (2 varieties)</li><li>Sambar</li><li>Coffee</li>
-            </ul>
+            <ul class="combo-items"><li>Asoka Halwa</li><li>Idli (2)</li><li>Ven Pongal / Rava Pongal</li><li>Poori &amp; Masal</li><li>Uththappam / Idiyappam with Kadappa</li><li>Chutney (2 varieties)</li><li>Sambar</li><li>Coffee</li></ul>
             <button class="combo-more-btn"></button>
           </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Breakfast Plan 2" data-price="₹249" data-meal="Breakfast">📱 Order on WhatsApp</button></div>
+          <div class="combo-ft">
+            <button class="btn btn-whatsapp open-om" data-plan="Vaitheegam Breakfast Plan 2" data-price="249" data-meal="Breakfast">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+              Order on WhatsApp
+            </button>
+          </div>
         </div>
       </div>
     </div>
 
-    <!-- A La Carte Breakfast - ALL 14 CLIENT ITEMS -->
+    <!-- A La Carte Breakfast -->
     <div class="menu-type-section" data-type="alacarte">
       <div class="mb-8 reveal">
-        <div class="menu-sub-label">Walking Breakfast - À La Carte</div>
-        <h3>Order Individual Items</h3>
-        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Tap the WhatsApp button on any item to order instantly.</p>
+        <div class="menu-sub-label">Walking Breakfast &mdash; &#192; La Carte</div>
+        <h2 style="font-size:clamp(1.3rem,2.4vw,1.85rem);">Order Individual Items</h2>
+        <p style="font-size:.92rem;max-width:520px;margin-top:8px;">Pick exactly what you want. Every item is freshly prepared to order. Tap to place your order directly via WhatsApp.</p>
       </div>
       <div class="alacarte-grid reveal">
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-idli.png" alt="Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Idli (2 Pcs)</div><div class="ac-price">₹40</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Idli%20(2%20Pcs)%20-%20%E2%82%B940%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-sambar-idli.png" alt="Sambar Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Sambar Idli</div><div class="ac-price">₹60</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Sambar%20Idli%20-%20%E2%82%B960%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ghee-podi-idli.png" alt="Ghee Podi Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ghee Podi Idli</div><div class="ac-price">₹50</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Ghee%20Podi%20Idli%20-%20%E2%82%B950%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-plain-dosa.png" alt="Plain Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Plain Dosa</div><div class="ac-price">₹70</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Plain%20Dosa%20-%20%E2%82%B970%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ghee-dosa.png" alt="Ghee Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ghee Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Ghee%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-masala-dosa.png" alt="Masala Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Masala Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Masala%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-mysore-masala-dosa.png" alt="Mysore Masala Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Mysore Masala Dosa</div><div class="ac-price">₹100</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Mysore%20Masala%20Dosa%20-%20%E2%82%B9100%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-onion-dosa.png" alt="Onion Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Onion Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Onion%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-rava-dosa.png" alt="Rava Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Rava Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Rava%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-podi-dosa.png" alt="Podi Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Podi Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Podi%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-uthappam.png" alt="Plain Uthappam" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Plain Uthappam</div><div class="ac-price">₹85</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Plain%20Uthappam%20-%20%E2%82%B985%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-onion-dosa.png" alt="Onion Uthappam" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Onion Uthappam</div><div class="ac-price">₹90</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Onion%20Uthappam%20-%20%E2%82%B990%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ven-pongal.png" alt="Ven Pongal" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ven Pongal</div><div class="ac-price">₹65</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Ven%20Pongal%20-%20%E2%82%B965%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-poori-masala.png" alt="Poori with Masala" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Poori (2) with Masala</div><div class="ac-price">₹100</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Poori%20(2)%20with%20Masala%20-%20%E2%82%B9100%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-idli.png" alt="Idli (2 Pcs) - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Idli (2 Pcs)</div>
+            <div class="ac-desc">Soft steamed rice cakes served with coconut chutney and hot sambar. A timeless South Indian morning classic.</div>
+            <div class="ac-price">&#8377;40</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Idli (2 Pcs)" data-price="40" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-sambar-idli.png" alt="Sambar Idli - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Sambar Idli</div>
+            <div class="ac-desc">Fluffy idlis dunked in rich, spiced sambar with pearl onions, tomato and tamarind. Comforting and hearty.</div>
+            <div class="ac-price">&#8377;60</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Sambar Idli" data-price="60" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-ghee-podi-idli.png" alt="Ghee Podi Idli - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Ghee Podi Idli</div>
+            <div class="ac-desc">Steamed idlis tossed in aromatic gunpowder spice mix with a generous drizzle of pure clarified ghee.</div>
+            <div class="ac-price">&#8377;50</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Ghee Podi Idli" data-price="50" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-plain-dosa.png" alt="Plain Dosa - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Plain Dosa</div>
+            <div class="ac-desc">Thin, crispy fermented rice crepe with golden lacy edges. Served with coconut chutney and sambar.</div>
+            <div class="ac-price">&#8377;70</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Plain Dosa" data-price="70" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-ghee-dosa.png" alt="Ghee Dosa - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Ghee Dosa</div>
+            <div class="ac-desc">Classic dosa roasted on tawa with generous pure ghee - super crispy exterior, rich golden colour.</div>
+            <div class="ac-price">&#8377;80</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Ghee Dosa" data-price="80" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-masala-dosa.png" alt="Masala Dosa - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Masala Dosa</div>
+            <div class="ac-desc">Crispy dosa filled with spiced potato and onion masala. Served with chutney and sambar.</div>
+            <div class="ac-price">&#8377;80</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Masala Dosa" data-price="80" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-mysore-masala-dosa.png" alt="Mysore Masala Dosa - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Mysore Masala Dosa</div>
+            <div class="ac-desc">Dosa layered with red Mysore chutney and spiced potato filling. Bold flavour, iconic preparation.</div>
+            <div class="ac-price">&#8377;100</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Mysore Masala Dosa" data-price="100" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-onion-dosa.png" alt="Onion Dosa - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Onion Dosa</div>
+            <div class="ac-desc">Crispy dosa topped with finely sliced caramelized onions for a slightly sweet, savoury crunch.</div>
+            <div class="ac-price">&#8377;80</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Onion Dosa" data-price="80" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-rava-dosa.png" alt="Rava Dosa - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Rava Dosa</div>
+            <div class="ac-desc">Instant semolina dosa with a delicate lacy texture. Crispy, light and flavoured with cumin and pepper.</div>
+            <div class="ac-price">&#8377;80</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Rava Dosa" data-price="80" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-podi-dosa.png" alt="Podi Dosa - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Podi Dosa</div>
+            <div class="ac-desc">Thin dosa coated with spicy idli podi and sesame oil. Each bite is packed with earthy, roasted flavour.</div>
+            <div class="ac-price">&#8377;80</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Podi Dosa" data-price="80" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-uthappam.png" alt="Plain Uthappam - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Plain Uthappam</div>
+            <div class="ac-desc">Thick, soft fermented pancake with crispy golden edges. Mildly tangy, served with sambar and chutney.</div>
+            <div class="ac-price">&#8377;85</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Plain Uthappam" data-price="85" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-uthappam.png" alt="Onion Uthappam - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Onion Uthappam</div>
+            <div class="ac-desc">Thick soft uthappam topped with finely chopped fresh onions, cooked until golden and caramelized.</div>
+            <div class="ac-price">&#8377;90</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Onion Uthappam" data-price="90" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-ven-pongal.png" alt="Ven Pongal - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Ven Pongal</div>
+            <div class="ac-desc">Creamy rice and moong dal khichdi finished with ghee, black pepper, cumin and golden cashews.</div>
+            <div class="ac-price">&#8377;65</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Ven Pongal" data-price="65" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-poori-masala.png" alt="Poori (2) with Masala - South Indian dish at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Poori (2) with Masala</div>
+            <div class="ac-desc">Two puffed deep-fried wheat pooris served with spiced yellow potato masala. A festive morning treat.</div>
+            <div class="ac-price">&#8377;100</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Poori (2) with Potato Masala" data-price="100" data-meal="Breakfast">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+            Order
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<!-- ══════════════ LUNCH ══════════════ -->
-<div class="menu-section" data-meal="lunch">
+</div><!-- /breakfast -->
+<!-- ═══════════════════ LUNCH ═══════════════════ -->
+<div class="menu-section" data-meal="lunch" role="tabpanel">
   <div class="container" style="padding-top:64px;padding-bottom:80px;">
-
     <!-- Regular Lunch -->
     <div class="menu-type-section" data-type="regular">
       <div class="mb-8 reveal">
         <div class="menu-sub-label">Regular Lunch Combos</div>
-        <h3>Lunch Combos</h3>
-        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">A complete, satisfying South Indian meal - the way it's meant to be.</p>
+        <h2 style="font-size:clamp(1.3rem,2.4vw,1.85rem);">Lunch Combos</h2>
+        <p style="font-size:.92rem;max-width:520px;margin-top:8px;">A complete, satisfying South Indian banana leaf meal - served with love, tradition and the finest seasonal ingredients.</p>
       </div>
       <div class="combo-grid">
-        <!-- L-Plan 1 -->
         <div class="combo-card reveal d1">
-          <div class="combo-hd" style="background:#26A69A;">
-            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Lunch Plan 1</div></div>
-            <div class="combo-plan-price">₹160</div>
+          <div class="combo-thumb">
+            <img src="assets/images/skanda-combo-lunch-1.png" alt="Lunch Plan 1 South Indian Lunch at Sri Skanda Bhavan" loading="lazy" />
+            <div class="combo-thumb-overlay"></div>
+            <span class="combo-thumb-badge" style="background:#26A69Acc;">Regular Meal</span>
+            <span class="combo-thumb-price">&#8377;160</span>
+          </div>
+          <div class="combo-hd">
+            <div><div class="combo-plan-name" style="color:#26A69A;">Regular Meal</div><div class="combo-plan-title">Lunch Plan 1</div></div>
           </div>
           <div class="combo-body">
             <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Paayasam</li><li>Mini Jaangiri</li><li>Poriyal (2 varieties)</li><li>Kootu</li>
-              <li>Ghee Dal</li><li>Masal Vada (1)</li><li>Rice</li><li>Sambar</li>
-              <li>Vathal Kuzhambu</li><li>Rasam</li><li>Pickle</li><li>Curd</li><li>Appalam</li>
-            </ul>
+            <ul class="combo-items"><li>Paayasam</li><li>Mini Jaangiri</li><li>Poriyal (2 varieties)</li><li>Kootu</li><li>Ghee Dal</li><li>Masal Vada (1)</li><li>Rice</li><li>Sambar</li><li>Vathal Kuzhambu</li><li>Rasam</li><li>Pickle</li><li>Curd</li><li>Appalam</li></ul>
             <button class="combo-more-btn"></button>
           </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Lunch Plan 1" data-price="₹160" data-meal="Lunch">📱 Order on WhatsApp</button></div>
+          <div class="combo-ft">
+            <button class="btn btn-whatsapp open-om" data-plan="Lunch Plan 1" data-price="160" data-meal="Lunch">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order on WhatsApp
+            </button>
+          </div>
         </div>
-        <!-- L-Plan 2 -->
         <div class="combo-card reveal d2">
-          <div class="combo-hd" style="background:#F9A825;">
-            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Lunch Plan 2</div></div>
-            <div class="combo-plan-price">₹269</div>
+          <div class="combo-thumb">
+            <img src="assets/images/skanda-combo-lunch-2.png" alt="Lunch Plan 2 South Indian Lunch at Sri Skanda Bhavan" loading="lazy" />
+            <div class="combo-thumb-overlay"></div>
+            <span class="combo-thumb-badge" style="background:#F9A825cc;">Regular Meal</span>
+            <span class="combo-thumb-price">&#8377;269</span>
+          </div>
+          <div class="combo-hd">
+            <div><div class="combo-plan-name" style="color:#F9A825;">Regular Meal</div><div class="combo-plan-title">Lunch Plan 2</div></div>
           </div>
           <div class="combo-body">
             <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Paayasam</li><li>Onion Raitha</li><li>Sweet Pachadi</li><li>Poriyal (2 varieties)</li>
-              <li>Kootu</li><li>Ghee Dhal</li><li>Masal Vadai (1)</li><li>Veg Briyani</li>
-              <li>Rice</li><li>Sambar</li><li>Vathal Kozhambu</li><li>Tomato Rasam</li>
-              <li>Curd</li><li>Chips</li><li>Appalam</li><li>Pickle</li>
-              <li>Ice Cream</li><li>Beda</li><li>Banana</li><li>Mini Jaangiri</li>
-            </ul>
+            <ul class="combo-items"><li>Paayasam</li><li>Onion Raitha</li><li>Sweet Pachadi</li><li>Poriyal (2 varieties)</li><li>Kootu</li><li>Ghee Dhal</li><li>Masal Vadai (1)</li><li>Veg Briyani</li><li>Rice</li><li>Sambar</li><li>Vathal Kozhambu</li><li>Tomato Rasam</li><li>Curd</li><li>Chips</li><li>Appalam</li><li>Pickle</li><li>Ice Cream</li><li>Beda</li><li>Banana</li><li>Mini Jaangiri</li></ul>
             <button class="combo-more-btn"></button>
           </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Lunch Plan 2" data-price="₹269" data-meal="Lunch">📱 Order on WhatsApp</button></div>
+          <div class="combo-ft">
+            <button class="btn btn-whatsapp open-om" data-plan="Lunch Plan 2" data-price="269" data-meal="Lunch">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order on WhatsApp
+            </button>
+          </div>
         </div>
-        <!-- L-Plan 3 -->
         <div class="combo-card reveal d3">
-          <div class="combo-hd" style="background:#EF5350;">
-            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Lunch Plan 3</div></div>
-            <div class="combo-plan-price">₹349</div>
+          <div class="combo-thumb">
+            <img src="assets/images/skanda-combo-lunch-3.png" alt="Lunch Plan 3 South Indian Lunch at Sri Skanda Bhavan" loading="lazy" />
+            <div class="combo-thumb-overlay"></div>
+            <span class="combo-thumb-badge" style="background:#EF5350cc;">Regular Meal</span>
+            <span class="combo-thumb-price">&#8377;349</span>
+          </div>
+          <div class="combo-hd">
+            <div><div class="combo-plan-name" style="color:#EF5350;">Regular Meal</div><div class="combo-plan-title">Lunch Plan 3</div></div>
           </div>
           <div class="combo-body">
             <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Rice Kheer Paayasam</li><li>Onion Raitha</li><li>Poriyal (2 varieties)</li>
-              <li>Malabar Aviyal</li><li>Ghee Dhal</li><li>Masal Vadai (1)</li>
-              <li>Veg Briyani</li><li>Rice</li><li>Sambar</li><li>Vathal Kozhambu</li>
-              <li>Tomato Rasam</li><li>Curd</li><li>Chips</li><li>Appalam</li><li>Pickle</li>
-              <li>Ice Cream</li><li>Beda</li><li>Fruit Salad</li><li>Poli</li>
-              <li>Water Bottle 300ml</li><li>Gulab Jamun</li>
-            </ul>
+            <ul class="combo-items"><li>Rice Kheer Paayasam</li><li>Onion Raitha</li><li>Poriyal (2 varieties)</li><li>Malabar Aviyal</li><li>Ghee Dhal</li><li>Masal Vadai (1)</li><li>Veg Briyani</li><li>Rice</li><li>Sambar</li><li>Vathal Kozhambu</li><li>Tomato Rasam</li><li>Curd</li><li>Chips</li><li>Appalam</li><li>Pickle</li><li>Ice Cream</li><li>Beda</li><li>Fruit Salad</li><li>Poli</li><li>Water Bottle 300ml</li><li>Gulab Jamun</li></ul>
             <button class="combo-more-btn"></button>
           </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Lunch Plan 3" data-price="₹349" data-meal="Lunch">📱 Order on WhatsApp</button></div>
+          <div class="combo-ft">
+            <button class="btn btn-whatsapp open-om" data-plan="Lunch Plan 3" data-price="349" data-meal="Lunch">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order on WhatsApp
+            </button>
+          </div>
         </div>
       </div>
     </div>
-
     <!-- Vaitheegam Lunch -->
     <div class="menu-type-section" data-type="vaitheegam">
       <div class="mb-8 reveal">
-        <span class="vaitheegam-badge">Vaitheegam - No Onion · No Garlic · Pure Saatvik</span>
-        <h3 style="margin-top:8px;">Vaitheegam Lunch</h3>
-        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Traditional Brahmin-style preparation for the pure Saatvik diet.</p>
+        <span class="vaitheegam-badge">Vaitheegam &mdash; No Onion &middot; No Garlic &middot; Pure Saatvik</span>
+        <h2 style="font-size:clamp(1.3rem,2.4vw,1.85rem);margin-top:10px;">Vaitheegam Lunch</h2>
+        <p style="font-size:.92rem;max-width:520px;margin-top:8px;">Traditional Brahmin-style lunch prepared without onion or garlic - deeply nourishing Saatvik cuisine rooted in ancient practice.</p>
       </div>
       <div class="combo-grid combo-2">
         <div class="combo-card reveal d1">
-          <div class="combo-hd" style="background:#66BB6A;">
-            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Lunch Plan 1</div></div>
-            <div class="combo-plan-price">₹249</div>
+          <div class="combo-thumb">
+            <img src="assets/images/skanda-vaitheegam-lunch-1.png" alt="Vaitheegam Lunch Plan 1 South Indian Lunch at Sri Skanda Bhavan" loading="lazy" />
+            <div class="combo-thumb-overlay"></div>
+            <span class="combo-thumb-badge" style="background:#66BB6Acc;">Vaitheegam</span>
+            <span class="combo-thumb-price">&#8377;249</span>
+          </div>
+          <div class="combo-hd">
+            <div><div class="combo-plan-name" style="color:#66BB6A;">Vaitheegam</div><div class="combo-plan-title">Vaitheegam Lunch Plan 1</div></div>
           </div>
           <div class="combo-body">
             <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Mini Jangiri</li><li>Paruppu Vadai</li><li>Payasam</li><li>Appalam</li>
-              <li>Potato Fry</li><li>Paruppu Usili</li><li>Aviyal</li><li>Sweet Pachadi</li>
-              <li>Ghee Dhal</li><li>Variety Rice</li><li>Rice</li><li>Kadhamba Sambar</li>
-              <li>More Kuzhambu</li><li>Rasam</li><li>Ketti More</li><li>Pickle</li>
-            </ul>
+            <ul class="combo-items"><li>Mini Jangiri</li><li>Paruppu Vadai</li><li>Payasam</li><li>Appalam</li><li>Potato Fry</li><li>Paruppu Usili</li><li>Aviyal</li><li>Sweet Pachadi</li><li>Ghee Dhal</li><li>Variety Rice</li><li>Rice</li><li>Kadhamba Sambar</li><li>More Kuzhambu</li><li>Rasam</li><li>Ketti More</li><li>Pickle</li></ul>
             <button class="combo-more-btn"></button>
           </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Lunch Plan 1" data-price="₹249" data-meal="Lunch">📱 Order on WhatsApp</button></div>
+          <div class="combo-ft">
+            <button class="btn btn-whatsapp open-om" data-plan="Vaitheegam Lunch Plan 1" data-price="249" data-meal="Lunch">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order on WhatsApp
+            </button>
+          </div>
         </div>
         <div class="combo-card reveal d2">
-          <div class="combo-hd" style="background:#43A047;">
-            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Lunch Plan 2</div></div>
-            <div class="combo-plan-price">₹299</div>
+          <div class="combo-thumb">
+            <img src="assets/images/skanda-vaitheegam-lunch-2.png" alt="Vaitheegam Lunch Plan 2 South Indian Lunch at Sri Skanda Bhavan" loading="lazy" />
+            <div class="combo-thumb-overlay"></div>
+            <span class="combo-thumb-badge" style="background:#43A047cc;">Vaitheegam</span>
+            <span class="combo-thumb-price">&#8377;299</span>
+          </div>
+          <div class="combo-hd">
+            <div><div class="combo-plan-name" style="color:#43A047;">Vaitheegam</div><div class="combo-plan-title">Vaitheegam Lunch Plan 2</div></div>
           </div>
           <div class="combo-body">
             <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Rice</li><li>Poricha Kuzhambu (Without Tamarind)</li><li>Vatha Kuzhambu / More Kuzhambu</li>
-              <li>Lemon Rasam</li><li>Curd</li><li>Paruppu Usili</li><li>Vazhakai Kara Kari</li>
-              <li>Malabar Aviyal</li><li>Paruppu Vadai</li><li>Semiya Payasam</li>
-              <li>Javvarisi Vathal</li><li>Pickle</li><li>Badhusa</li>
-            </ul>
+            <ul class="combo-items"><li>Rice</li><li>Poricha Kuzhambu (Without Tamarind)</li><li>Vatha Kuzhambu / More Kuzhambu</li><li>Lemon Rasam</li><li>Curd</li><li>Paruppu Usili</li><li>Vazhakai Kara Kari</li><li>Malabar Aviyal</li><li>Paruppu Vadai</li><li>Semiya Payasam</li><li>Javvarisi Vathal</li><li>Pickle</li><li>Badhusa</li></ul>
             <button class="combo-more-btn"></button>
           </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Lunch Plan 2" data-price="₹299" data-meal="Lunch">📱 Order on WhatsApp</button></div>
+          <div class="combo-ft">
+            <button class="btn btn-whatsapp open-om" data-plan="Vaitheegam Lunch Plan 2" data-price="299" data-meal="Lunch">
+              <svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order on WhatsApp
+            </button>
+          </div>
         </div>
       </div>
     </div>
-
     <!-- A La Carte Lunch -->
     <div class="menu-type-section" data-type="alacarte">
       <div class="mb-8 reveal">
-        <div class="menu-sub-label">À La Carte - Lunch</div>
-        <h3>Individual Lunch Items</h3>
-        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Order individual items. Tap WhatsApp to order.</p>
+        <div class="menu-sub-label">&#192; La Carte &mdash; Lunch</div>
+        <h2 style="font-size:clamp(1.3rem,2.4vw,1.85rem);">Individual Lunch Items</h2>
+        <p style="font-size:.92rem;max-width:520px;margin-top:8px;">Order individual lunch dishes. Each item is freshly prepared on request.</p>
       </div>
       <div class="alacarte-grid reveal">
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-banana-leaf-lunch.png" alt="Banana Leaf Lunch" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Banana Leaf Lunch</div><div class="ac-price">₹120</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Banana%20Leaf%20Lunch%20-%20%E2%82%B9120%0ADate%3A%20%0APersons%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-veg-biryani.png" alt="Veg Biryani" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Veg Biryani</div><div class="ac-price">₹120</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Veg%20Biryani%20-%20%E2%82%B9120%0ADate%3A%20%0APersons%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-payasam.png" alt="Payasam" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Payasam</div><div class="ac-price">₹50</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Payasam%20-%20%E2%82%B950%0ADate%3A%20%0APersons%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-vaitheegam-thali.png" alt="Vaitheegam Thali" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Vaitheegam Thali</div><div class="ac-price">₹180</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0AOrder%3A%20Vaitheegam%20Thali%20-%20%E2%82%B9180%0ADate%3A%20%0APersons%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-banana-leaf-lunch.png" alt="Banana Leaf Lunch South Indian at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Banana Leaf Lunch</div>
+            <div class="ac-desc">Traditional South Indian lunch served on a fresh banana leaf with rice, sambar, rasam, kootu and sides.</div>
+            <div class="ac-price">&#8377;120</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Banana Leaf Lunch" data-price="120" data-meal="Lunch">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-veg-biryani.png" alt="Veg Biryani South Indian at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Veg Biryani</div>
+            <div class="ac-desc">Fragrant basmati rice slow-cooked with fresh vegetables, whole spices and aromatic herbs. Served with raita.</div>
+            <div class="ac-price">&#8377;120</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Veg Biryani" data-price="120" data-meal="Lunch">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-payasam.png" alt="Payasam South Indian at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Payasam</div>
+            <div class="ac-desc">Creamy sweet rice pudding simmered in milk with saffron, cardamom, cashews and raisins. A sacred dessert.</div>
+            <div class="ac-price">&#8377;50</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Payasam" data-price="50" data-meal="Lunch">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order
+          </button>
+        </div>
+        <div class="ac-card">
+          <div class="ac-img"><img src="assets/images/skanda-ac-vaitheegam-thali.png" alt="Vaitheegam Thali South Indian at Sri Skanda Bhavan" loading="lazy" /></div>
+          <div class="ac-body">
+            <div class="ac-name">Vaitheegam Thali</div>
+            <div class="ac-desc">Complete Saatvik thali without onion or garlic - rice, sambar, more kuzhambu, aviyal, vadai and payasam.</div>
+            <div class="ac-price">&#8377;180</div>
+          </div>
+          <button class="ac-btn open-om" data-plan="Vaitheegam Thali" data-price="180" data-meal="Lunch">
+            <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order
+          </button>
+        </div>
       </div>
     </div>
   </div>
-</div>
-
-<!-- ══════════════ DINNER ══════════════ -->
-<div class="menu-section" data-meal="dinner">
+</div><!-- /lunch -->
+<!-- ═══════════════════ DINNER ═══════════════════ -->
+<div class="menu-section" data-meal="dinner" role="tabpanel">
   <div class="container" style="padding-top:64px;padding-bottom:80px;">
-
     <!-- Regular Dinner -->
     <div class="menu-type-section" data-type="regular">
       <div class="mb-8 reveal">
         <div class="menu-sub-label">Regular Dinner Combos</div>
-        <h3>Dinner Combos</h3>
-        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">End your day with a warm, wholesome South Indian dinner.</p>
+        <h2 style="font-size:clamp(1.3rem,2.4vw,1.85rem);">Dinner Combos</h2>
+        <p style="font-size:.92rem;max-width:520px;margin-top:8px;">End your day with a warm, wholesome South Indian dinner - light yet satisfying, made with fresh ingredients every evening.</p>
       </div>
       <div class="combo-grid">
-        <!-- D-Plan 1 -->
         <div class="combo-card reveal d1">
-          <div class="combo-hd" style="background:#1565C0;">
-            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Dinner Plan 1</div></div>
-            <div class="combo-plan-price">₹149</div>
-          </div>
-          <div class="combo-body">
-            <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Idli (2)</li><li>Chappathi</li><li>Rava Kichadi / Rice Upma / Wheat Upma</li>
-              <li>Mini Uththappam (4 varieties)</li><li>Chutney (2 varieties)</li>
-              <li>Sambar</li><li>Kurma</li><li>Milagu Milk / Mass Milk</li>
-            </ul>
-            <button class="combo-more-btn"></button>
-          </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Dinner Plan 1" data-price="₹149" data-meal="Dinner">📱 Order on WhatsApp</button></div>
+          <div class="combo-thumb"><img src="assets/images/skanda-combo-dinner-1.png" alt="Dinner Plan 1 Dinner Sri Skanda Bhavan" loading="lazy" /><div class="combo-thumb-overlay"></div><span class="combo-thumb-badge" style="background:#1565C0cc;">Regular Meal</span><span class="combo-thumb-price">&#8377;149</span></div>
+          <div class="combo-hd"><div><div class="combo-plan-name" style="color:#1565C0;">Regular Meal</div><div class="combo-plan-title">Dinner Plan 1</div></div></div>
+          <div class="combo-body"><div class="items-label">Includes:</div><ul class="combo-items"><li>Idli (2)</li><li>Chappathi</li><li>Rava Kichadi / Rice Upma / Wheat Upma</li><li>Mini Uththappam (4 varieties)</li><li>Chutney (2 varieties)</li><li>Sambar</li><li>Kurma</li><li>Milagu Milk / Mass Milk</li></ul><button class="combo-more-btn"></button></div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-om" data-plan="Dinner Plan 1" data-price="149" data-meal="Dinner"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order on WhatsApp</button></div>
         </div>
-        <!-- D-Plan 2 -->
         <div class="combo-card reveal d2">
-          <div class="combo-hd" style="background:#AB47BC;">
-            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Dinner Plan 2</div></div>
-            <div class="combo-plan-price">₹199</div>
-          </div>
-          <div class="combo-body">
-            <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Carrot Halwa / Bread Halwa</li><li>Idli (2)</li>
-              <li>Chappathi / Chola Poori Channa</li><li>Kichadi / Rice Upma / Wheat Upma</li>
-              <li>Bisibelabath with Vadagam</li><li>Curd Rice with Pickle</li>
-              <li>Sambar</li><li>Chutney (3 varieties)</li><li>Panagarkandu Milk / Mass Milk</li>
-            </ul>
-            <button class="combo-more-btn"></button>
-          </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Dinner Plan 2" data-price="₹199" data-meal="Dinner">📱 Order on WhatsApp</button></div>
+          <div class="combo-thumb"><img src="assets/images/skanda-combo-dinner-2.png" alt="Dinner Plan 2 Dinner Sri Skanda Bhavan" loading="lazy" /><div class="combo-thumb-overlay"></div><span class="combo-thumb-badge" style="background:#AB47BCcc;">Regular Meal</span><span class="combo-thumb-price">&#8377;199</span></div>
+          <div class="combo-hd"><div><div class="combo-plan-name" style="color:#AB47BC;">Regular Meal</div><div class="combo-plan-title">Dinner Plan 2</div></div></div>
+          <div class="combo-body"><div class="items-label">Includes:</div><ul class="combo-items"><li>Carrot Halwa / Bread Halwa</li><li>Idli (2)</li><li>Chappathi / Chola Poori Channa</li><li>Kichadi / Rice Upma / Wheat Upma</li><li>Bisibelabath with Vadagam</li><li>Curd Rice with Pickle</li><li>Sambar</li><li>Chutney (3 varieties)</li><li>Panagarkandu Milk / Mass Milk</li></ul><button class="combo-more-btn"></button></div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-om" data-plan="Dinner Plan 2" data-price="199" data-meal="Dinner"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order on WhatsApp</button></div>
         </div>
-        <!-- D-Plan 3 -->
         <div class="combo-card reveal d3">
-          <div class="combo-hd" style="background:#1A1A2E;border:1px solid rgba(249,168,37,0.2);">
-            <div><div class="combo-plan-name">Regular Meal</div><div class="combo-plan-title">Dinner Plan 3</div></div>
-            <div class="combo-plan-price">₹249</div>
-          </div>
-          <div class="combo-body">
-            <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Carrot Halwa / Dry Gulab Jamun</li><li>Idli (2)</li><li>Kothu Parota</li>
-              <li>Podi Uthappam (1)</li><li>Veg Rava Kichadi</li><li>Veg Pulav</li>
-              <li>Onion Raita</li><li>Curd Rice with Pickle</li><li>Ice Cream</li>
-              <li>Sambar</li><li>Chutney (3 varieties)</li>
-              <li>Panagarkandu Milk / Mass Milk</li><li>Water Bottle 300ml</li>
-            </ul>
-            <button class="combo-more-btn"></button>
-          </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Dinner Plan 3" data-price="₹249" data-meal="Dinner">📱 Order on WhatsApp</button></div>
+          <div class="combo-thumb"><img src="assets/images/skanda-combo-dinner-3.png" alt="Dinner Plan 3 Dinner Sri Skanda Bhavan" loading="lazy" /><div class="combo-thumb-overlay"></div><span class="combo-thumb-badge" style="background:#1A1A2Ecc;">Regular Meal</span><span class="combo-thumb-price">&#8377;249</span></div>
+          <div class="combo-hd"><div><div class="combo-plan-name" style="color:#1A1A2E;">Regular Meal</div><div class="combo-plan-title">Dinner Plan 3</div></div></div>
+          <div class="combo-body"><div class="items-label">Includes:</div><ul class="combo-items"><li>Carrot Halwa / Dry Gulab Jamun</li><li>Idli (2)</li><li>Kothu Parota</li><li>Podi Uthappam (1)</li><li>Veg Rava Kichadi</li><li>Veg Pulav</li><li>Onion Raita</li><li>Curd Rice with Pickle</li><li>Ice Cream</li><li>Sambar</li><li>Chutney (3 varieties)</li><li>Panagarkandu Milk / Mass Milk</li><li>Water Bottle 300ml</li></ul><button class="combo-more-btn"></button></div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-om" data-plan="Dinner Plan 3" data-price="249" data-meal="Dinner"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order on WhatsApp</button></div>
         </div>
       </div>
     </div>
-
     <!-- Vaitheegam Dinner -->
     <div class="menu-type-section" data-type="vaitheegam">
       <div class="mb-8 reveal">
-        <span class="vaitheegam-badge">Vaitheegam - No Onion · No Garlic · Pure Saatvik</span>
-        <h3 style="margin-top:8px;">Vaitheegam Dinner</h3>
-        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Pure Saatvik dinner for the spiritually inclined.</p>
+        <span class="vaitheegam-badge">Vaitheegam &mdash; No Onion &middot; No Garlic &middot; Pure Saatvik</span>
+        <h2 style="font-size:clamp(1.3rem,2.4vw,1.85rem);margin-top:10px;">Vaitheegam Dinner</h2>
+        <p style="font-size:.92rem;max-width:520px;margin-top:8px;">Pure Saatvik evening meal for pilgrims and the spiritually inclined - nourishing, sattvic and prepared with complete devotion.</p>
       </div>
       <div class="combo-grid combo-2">
         <div class="combo-card reveal d1">
-          <div class="combo-hd" style="background:#66BB6A;">
-            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Dinner Plan 1</div></div>
-            <div class="combo-plan-price">₹199</div>
-          </div>
-          <div class="combo-body">
-            <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Idli (2)</li><li>Chappathi with Dhal</li><li>Curd Rice</li><li>Rice Upma</li>
-              <li>Thakkali Thokku</li><li>Chutney (1 variety)</li><li>Sambar</li><li>Milagu Milk / Mass Milk</li>
-            </ul>
-            <button class="combo-more-btn"></button>
-          </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Dinner Plan 1" data-price="₹199" data-meal="Dinner">📱 Order on WhatsApp</button></div>
+          <div class="combo-thumb"><img src="assets/images/skanda-vaitheegam-dinner-1.png" alt="Vaitheegam Dinner Plan 1 Dinner Sri Skanda Bhavan" loading="lazy" /><div class="combo-thumb-overlay"></div><span class="combo-thumb-badge" style="background:#66BB6Acc;">Vaitheegam</span><span class="combo-thumb-price">&#8377;199</span></div>
+          <div class="combo-hd"><div><div class="combo-plan-name" style="color:#66BB6A;">Vaitheegam</div><div class="combo-plan-title">Vaitheegam Dinner Plan 1</div></div></div>
+          <div class="combo-body"><div class="items-label">Includes:</div><ul class="combo-items"><li>Idli (2)</li><li>Chappathi with Dhal</li><li>Curd Rice</li><li>Rice Upma</li><li>Thakkali Thokku</li><li>Chutney (1 variety)</li><li>Sambar</li><li>Milagu Milk / Mass Milk</li></ul><button class="combo-more-btn"></button></div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-om" data-plan="Vaitheegam Dinner Plan 1" data-price="199" data-meal="Dinner"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order on WhatsApp</button></div>
         </div>
         <div class="combo-card reveal d2">
-          <div class="combo-hd" style="background:#43A047;">
-            <div><div class="combo-plan-name">Vaitheegam</div><div class="combo-plan-title">Dinner Plan 2</div></div>
-            <div class="combo-plan-price">₹299</div>
-          </div>
-          <div class="combo-body">
-            <div class="items-label">Includes:</div>
-            <ul class="combo-items">
-              <li>Idli (2)</li><li>Chappathi with Dhal</li><li>Curd Rice</li><li>Rice Upma</li>
-              <li>Thakkali Thokku</li><li>Chidambaram Kosthu</li><li>Mini Uththappam</li>
-              <li>Sambar Rice with Vadagam</li><li>Chutney (1 variety)</li>
-              <li>Sambar</li><li>Milagu Milk / Mass Milk</li>
-            </ul>
-            <button class="combo-more-btn"></button>
-          </div>
-          <div class="combo-ft"><button class="btn btn-whatsapp open-order-modal" data-plan="Vaitheegam Dinner Plan 2" data-price="₹299" data-meal="Dinner">📱 Order on WhatsApp</button></div>
+          <div class="combo-thumb"><img src="assets/images/skanda-vaitheegam-dinner-2.png" alt="Vaitheegam Dinner Plan 2 Dinner Sri Skanda Bhavan" loading="lazy" /><div class="combo-thumb-overlay"></div><span class="combo-thumb-badge" style="background:#43A047cc;">Vaitheegam</span><span class="combo-thumb-price">&#8377;299</span></div>
+          <div class="combo-hd"><div><div class="combo-plan-name" style="color:#43A047;">Vaitheegam</div><div class="combo-plan-title">Vaitheegam Dinner Plan 2</div></div></div>
+          <div class="combo-body"><div class="items-label">Includes:</div><ul class="combo-items"><li>Idli (2)</li><li>Chappathi with Dhal</li><li>Curd Rice</li><li>Rice Upma</li><li>Thakkali Thokku</li><li>Chidambaram Kosthu</li><li>Mini Uththappam</li><li>Sambar Rice with Vadagam</li><li>Chutney (1 variety)</li><li>Sambar</li><li>Milagu Milk / Mass Milk</li></ul><button class="combo-more-btn"></button></div>
+          <div class="combo-ft"><button class="btn btn-whatsapp open-om" data-plan="Vaitheegam Dinner Plan 2" data-price="299" data-meal="Dinner"><svg width="14" height="14" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order on WhatsApp</button></div>
         </div>
       </div>
     </div>
-
-    <!-- A La Carte Dinner - ALL 15 CLIENT ITEMS -->
+    <!-- A La Carte Dinner -->
     <div class="menu-type-section" data-type="alacarte">
       <div class="mb-8 reveal">
-        <div class="menu-sub-label">Walking Dinner - À La Carte</div>
-        <h3>Individual Dinner Items</h3>
-        <p style="font-size:0.92rem;max-width:500px;margin-top:6px;">Order individual items. Tap WhatsApp to order.</p>
+        <div class="menu-sub-label">Walking Dinner &mdash; &#192; La Carte</div>
+        <h2 style="font-size:clamp(1.3rem,2.4vw,1.85rem);">Individual Dinner Items</h2>
+        <p style="font-size:.92rem;max-width:520px;margin-top:8px;">Order individual dinner dishes freshly prepared on request. Tap any item to order directly on WhatsApp.</p>
       </div>
       <div class="alacarte-grid reveal">
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-idli.png" alt="Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Idli (2 Pcs)</div><div class="ac-price">₹40</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Idli%20(2%20Pcs)%20-%20%E2%82%B940%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-sambar-idli.png" alt="Sambar Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Sambar Idli</div><div class="ac-price">₹60</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Sambar%20Idli%20-%20%E2%82%B960%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ghee-podi-idli.png" alt="Ghee Podi Idli" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ghee Podi Idli</div><div class="ac-price">₹50</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Ghee%20Podi%20Idli%20-%20%E2%82%B950%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-plain-dosa.png" alt="Plain Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Plain Dosa</div><div class="ac-price">₹70</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Plain%20Dosa%20-%20%E2%82%B970%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ghee-dosa.png" alt="Ghee Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ghee Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Ghee%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-onion-dosa.png" alt="Onion Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Onion Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Onion%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-rava-dosa.png" alt="Rava Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Rava Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Rava%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-podi-dosa.png" alt="Podi Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Podi Dosa</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Podi%20Dosa%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-uthappam.png" alt="Plain Uthappam" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Plain Uthappam</div><div class="ac-price">₹85</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Plain%20Uthappam%20-%20%E2%82%B985%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-onion-dosa.png" alt="Onion Uthappam" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Onion Uthappam</div><div class="ac-price">₹90</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Onion%20Uthappam%20-%20%E2%82%B990%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-parota.png" alt="Parota" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Parota</div><div class="ac-price">₹100</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Parota%20-%20%E2%82%B9100%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-chola-poori.png" alt="Chola Poori" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Chola Poori</div><div class="ac-price">₹100</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Chola%20Poori%20-%20%E2%82%B9100%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-chappathi.png" alt="Chappathi Set" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Chappathi Set</div><div class="ac-price">₹80</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Chappathi%20Set%20-%20%E2%82%B980%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-mushroom-dosa.png" alt="Mushroom Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Mushroom Dosa</div><div class="ac-price">₹120</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Mushroom%20Dosa%20-%20%E2%82%B9120%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
-        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-panner-dosa.png" alt="Panner Dosa" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Panner Dosa</div><div class="ac-price">₹120</div></div><a href="https://wa.me/918248077837?text=🙏%20Hi%20Sri%20Skanda%20Bhavan!%0A%0ADinner%20Order%3A%20Panner%20Dosa%20-%20%E2%82%B9120%0ADate%3A%20%0AQuantity%3A%20" target="_blank" class="ac-wa">📱</a></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-idli.png" alt="Idli (2 Pcs) at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Idli (2 Pcs)</div><div class="ac-desc">Soft steamed idlis with sambar and coconut chutney. Light, healthy and perfect for a peaceful evening.</div><div class="ac-price">&#8377;40</div></div><button class="ac-btn open-om" data-plan="Idli (2 Pcs)" data-price="40" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-sambar-idli.png" alt="Sambar Idli at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Sambar Idli</div><div class="ac-desc">Pillowy idlis soaked in warm, spiced sambar - a soothing and satisfying evening meal.</div><div class="ac-price">&#8377;60</div></div><button class="ac-btn open-om" data-plan="Sambar Idli" data-price="60" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ghee-podi-idli.png" alt="Ghee Podi Idli at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ghee Podi Idli</div><div class="ac-desc">Soft idlis generously coated in spiced gunpowder podi and melted golden ghee. Rich and aromatic.</div><div class="ac-price">&#8377;50</div></div><button class="ac-btn open-om" data-plan="Ghee Podi Idli" data-price="50" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-plain-dosa.png" alt="Plain Dosa at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Plain Dosa</div><div class="ac-desc">Thin crispy fermented rice crepe served with coconut chutney and hot sambar. Evergreen evening favourite.</div><div class="ac-price">&#8377;70</div></div><button class="ac-btn open-om" data-plan="Plain Dosa" data-price="70" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-ghee-dosa.png" alt="Ghee Dosa at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Ghee Dosa</div><div class="ac-desc">Extra crispy dosa cooked with a generous pour of clarified butter - golden, fragrant and irresistible.</div><div class="ac-price">&#8377;80</div></div><button class="ac-btn open-om" data-plan="Ghee Dosa" data-price="80" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-onion-dosa.png" alt="Onion Dosa at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Onion Dosa</div><div class="ac-desc">Crisp dosa with finely sliced caramelized onion cooked right into the surface. Sweet, savoury and satisfying.</div><div class="ac-price">&#8377;80</div></div><button class="ac-btn open-om" data-plan="Onion Dosa" data-price="80" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-rava-dosa.png" alt="Rava Dosa at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Rava Dosa</div><div class="ac-desc">Lacy, crispy semolina dosa with a delicate open texture and gentle spice of cumin and green chilli.</div><div class="ac-price">&#8377;80</div></div><button class="ac-btn open-om" data-plan="Rava Dosa" data-price="80" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-podi-dosa.png" alt="Podi Dosa at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Podi Dosa</div><div class="ac-desc">Thin crispy dosa rubbed with spicy gun powder podi and sesame oil. Bold, earthy evening treat.</div><div class="ac-price">&#8377;80</div></div><button class="ac-btn open-om" data-plan="Podi Dosa" data-price="80" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-uthappam.png" alt="Plain Uthappam at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Plain Uthappam</div><div class="ac-desc">Thick soft fermented pancake with slightly crispy edges. Mild, tangy and served with chutney.</div><div class="ac-price">&#8377;85</div></div><button class="ac-btn open-om" data-plan="Plain Uthappam" data-price="85" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-uthappam.png" alt="Onion Uthappam at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Onion Uthappam</div><div class="ac-desc">Thick uthappam topped with fresh onions cooked golden - satisfying, flavourful and comforting.</div><div class="ac-price">&#8377;90</div></div><button class="ac-btn open-om" data-plan="Onion Uthappam" data-price="90" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-parota.png" alt="Parota at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Parota</div><div class="ac-desc">Soft flaky layered South Indian flatbread served with vegetable kurma. Rich and filling dinner choice.</div><div class="ac-price">&#8377;100</div></div><button class="ac-btn open-om" data-plan="Parota" data-price="100" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-chola-poori.png" alt="Chola Poori at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Chola Poori</div><div class="ac-desc">Golden puffed pooris served with hearty black chickpea curry - a bold, protein-rich evening meal.</div><div class="ac-price">&#8377;100</div></div><button class="ac-btn open-om" data-plan="Chola Poori" data-price="100" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-chappathi.png" alt="Chappathi Set at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Chappathi Set</div><div class="ac-desc">Soft whole wheat rotis served with spiced dhal. Light, wholesome and great for a nutritious dinner.</div><div class="ac-price">&#8377;80</div></div><button class="ac-btn open-om" data-plan="Chappathi Set" data-price="80" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-mushroom-dosa.png" alt="Mushroom Dosa at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Mushroom Dosa</div><div class="ac-desc">Crispy dosa filled with spiced sautéed mushroom masala - earthy, aromatic and distinctly satisfying.</div><div class="ac-price">&#8377;120</div></div><button class="ac-btn open-om" data-plan="Mushroom Dosa" data-price="120" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
+        <div class="ac-card"><div class="ac-img"><img src="assets/images/skanda-ac-panner-dosa.png" alt="Panner Dosa at Sri Skanda Bhavan" loading="lazy" /></div><div class="ac-body"><div class="ac-name">Panner Dosa</div><div class="ac-desc">Golden dosa filled with spiced paneer (cottage cheese) filling - rich, creamy and premium dinner option.</div><div class="ac-price">&#8377;120</div></div><button class="ac-btn open-om" data-plan="Panner Dosa" data-price="120" data-meal="Dinner"><svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg> Order</button></div>
       </div>
     </div>
   </div>
-</div>
-
-<!-- ORDER FORM SECTION -->
-<section class="order-section section-pad">
+</div><!-- /dinner -->
+<!-- ORDER SECTION -->
+<section class="order-section section-pad" aria-labelledby="order-heading">
   <div class="container">
     <div class="order-info reveal-left">
-      <div class="eyebrow" style="color:var(--gold);">Easy Ordering</div>
-      <h2 style="color:var(--white);margin-top:14px;">Order Your Meal in One Tap</h2>
-      <p>Fill the form and your order goes directly to WhatsApp. Quick, simple, confirmed instantly.</p>
+      <div class="eyebrow" style="color:var(--gold);">How to Order</div>
+      <h2 id="order-heading" style="color:var(--white);margin-top:14px;">Order Your Meal Directly</h2>
+      <p>Select any combo or à la carte item. A quick popup form collects your details and sends your order straight to our WhatsApp for instant confirmation.</p>
       <div class="order-steps">
-        <div class="order-step"><div class="step-num">1</div><div class="step-text">Click any "Order on WhatsApp" button on a combo or item</div></div>
-        <div class="order-step"><div class="step-num">2</div><div class="step-text">Fill your name, phone number, date and persons in the popup</div></div>
-        <div class="order-step"><div class="step-num">3</div><div class="step-text">Tap Send - we confirm your order on WhatsApp instantly</div></div>
+        <div class="order-step"><div class="step-num">1</div><div class="step-text">Click the Order button on any combo or dish</div></div>
+        <div class="order-step"><div class="step-num">2</div><div class="step-text">Fill your name, phone, date and number of persons</div></div>
+        <div class="order-step"><div class="step-num">3</div><div class="step-text">Tap Send - order confirmed directly on WhatsApp</div></div>
       </div>
       <div class="order-phone">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="#25D366"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="var(--gold)" stroke-width="1.8"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07A19.5 19.5 0 0 1 4.69 12 19.79 19.79 0 0 1 1.61 3.44 2 2 0 0 1 3.6 1.27h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L7.91 8.86a16 16 0 0 0 6 6l.91-.91a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         <span>+91 82480 77837</span>
       </div>
     </div>
     <div class="order-form-card reveal-right">
-      <h3>Quick Order Form</h3>
-      <form id="order-form" style="margin-top:20px;">
-        <div class="modal-form-row">
-          <div class="form-group"><label>Your Name</label><input type="text" name="name" class="form-control" placeholder="Enter your name" required /></div>
-          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control" placeholder="+91 00000 00000" required /></div>
+      <h3>General Order Form</h3>
+      <p style="font-size:.86rem;color:var(--text-mid);margin:6px 0 24px;">Fill your details below and send directly to WhatsApp.</p>
+      <form id="gen-order-form">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
+          <div class="form-group"><label>Your Name</label><input type="text" name="name" class="form-control" placeholder="Enter your name" required autocomplete="name" /></div>
+          <div class="form-group"><label>Phone Number</label><input type="tel" name="phone" class="form-control" placeholder="+91 00000 00000" required autocomplete="tel" /></div>
         </div>
-        <div class="modal-form-row">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
           <div class="form-group"><label>Meal Type</label><select name="meal" class="form-control"><option>Breakfast</option><option>Lunch</option><option>Dinner</option></select></div>
-          <div class="form-group"><label>Plan</label><select name="plan" class="form-control"><option>Regular Plan 1</option><option>Regular Plan 2</option><option>Regular Plan 3</option><option>Vaitheegam Plan 1</option><option>Vaitheegam Plan 2</option><option>À La Carte</option></select></div>
+          <div class="form-group"><label>Plan</label><select name="plan" class="form-control"><option>Regular Plan 1</option><option>Regular Plan 2</option><option>Regular Plan 3</option><option>Vaitheegam Plan 1</option><option>Vaitheegam Plan 2</option><option>&#192; La Carte</option></select></div>
         </div>
-        <div class="modal-form-row">
+        <div style="display:grid;grid-template-columns:1fr 1fr;gap:14px">
           <div class="form-group"><label>Date</label><input type="date" name="date" class="form-control" /></div>
-          <div class="form-group"><label>Number of Persons</label><input type="number" name="persons" class="form-control" min="1" value="1" /></div>
+          <div class="form-group"><label>No. of Persons</label><input type="number" name="persons" class="form-control" min="1" value="1" /></div>
         </div>
-        <div class="form-group"><label>Special Requests</label><textarea name="special" class="form-control" rows="3" placeholder="Any dietary needs or special requests..."></textarea></div>
+        <div class="form-group"><label>Special Requests</label><textarea name="special" class="form-control" rows="3" placeholder="Dietary needs or special requests..."></textarea></div>
         <button type="submit" class="form-submit">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-          Send Order on WhatsApp →
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Send Order on WhatsApp
         </button>
-        <p class="form-note">No registration needed. Order confirmed via WhatsApp directly.</p>
+        <p class="form-note">No registration needed. Order confirmed directly via WhatsApp.</p>
       </form>
     </div>
   </div>
 </section>
-
 <!-- FOOTER -->
-<footer class="footer">
+<footer class="footer" role="contentinfo">
   <div class="container">
     <div class="footer-body">
       <div class="footer-brand">
         <div class="f-logo">
-          <img src="assets/images/logo-tsp.png" alt="Sri Skanda Bhavan" />
+          <img src="assets/images/logo-tsp.png" alt="Sri Skanda Bhavan" width="44" height="44" />
           <div><span class="brand">Sri Skanda Bhavan</span><span class="tagline">Live the Life</span></div>
         </div>
-        <p>Hospitality Rooted in Heritage. Pure vegetarian dining since 1998.</p>
+        <p>Hospitality rooted in heritage. Pure vegetarian dining since 1998, steps away from the sacred Amirthakadeshwarar Temple, Thirukkadaiyur.</p>
       </div>
       <div class="footer-col"><h5>Quick Links</h5><ul><li><a href="index.html">Home</a></li><li><a href="rooms.html">Rooms</a></li><li><a href="restaurant.html">Restaurant</a></li><li><a href="contact.html">Contact</a></li></ul></div>
-      <div class="footer-col"><h5>Dining</h5><ul><li><a href="restaurant.html">Breakfast</a></li><li><a href="restaurant.html">Lunch</a></li><li><a href="restaurant.html">Dinner</a></li><li><a href="restaurant.html">Vaitheegam</a></li></ul></div>
+      <div class="footer-col"><h5>Dining</h5><ul><li><a href="restaurant.html#menu">Breakfast</a></li><li><a href="restaurant.html#menu">Lunch</a></li><li><a href="restaurant.html#menu">Dinner</a></li><li><a href="restaurant.html#menu">Vaitheegam</a></li></ul></div>
       <div class="footer-col">
         <h5>Reach Us</h5>
-        <div class="f-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/></svg><a href="tel:+918248077837" style="color:rgba(255,255,255,0.6)">+91 82480 77837</a></div>
-        <div class="f-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Sannathi Street, Thirukkadaiyur – 609311</div>
+        <div class="f-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07"/><path d="M2 2l20 20"/></svg><a href="tel:+918248077837" style="color:rgba(255,255,255,.6)">+91 82480 77837</a></div>
+        <div class="f-contact-item"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>Sannathi Street, Thirukkadaiyur &ndash; 609311</div>
       </div>
     </div>
     <div class="footer-bottom">
-      <span>© 2025 Sri Skanda Bhavan. All rights reserved.</span>
+      <span>&copy; 2025 Sri Skanda Bhavan. All rights reserved.</span>
       <span class="wm">Designed &amp; Developed by <strong>WebMint Solutions</strong></span>
     </div>
   </div>
 </footer>
 
-<!-- ORDER MODAL POPUP -->
-<div class="order-modal-overlay" id="orderModalOverlay">
-  <div class="order-modal">
-    <div class="order-modal-header">
+<!-- ORDER MODAL -->
+<div class="om-overlay" id="omOverlay" role="dialog" aria-modal="true" aria-labelledby="om-title">
+  <div class="om-box">
+    <div class="om-hd">
       <div>
-        <h3 id="modal-title">Place Your Order</h3>
-        <span class="plan-tag" id="modal-plan-tag">Select your plan below</span>
+        <h3 id="om-title">Place Your Order</h3>
+        <span class="om-tag" id="om-tag">Meal Order</span>
+        <span class="om-price" id="om-price">&#8377;--</span>
       </div>
-      <button class="modal-close-btn" id="modalCloseBtn">✕</button>
+      <button class="om-x" id="om-close" aria-label="Close order form">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><line x1="18" y1="6" x2="6" y2="18"/><line x1="6" y1="6" x2="18" y2="18"/></svg>
+      </button>
     </div>
-    <div class="order-modal-body">
-      <form id="modal-order-form">
-        <div class="modal-form-row">
-          <div class="form-group"><label>Your Name *</label><input type="text" id="m-name" class="form-control" placeholder="Enter your name" required /></div>
-          <div class="form-group"><label>Phone Number *</label><input type="tel" id="m-phone" class="form-control" placeholder="+91 00000 00000" required /></div>
+    <div class="om-body">
+      <form id="om-form" novalidate>
+        <div class="om-row">
+          <div class="om-g"><label>Your Name <span style="color:#EF5350">*</span></label><input type="text" id="om-name" class="om-inp" placeholder="Enter your full name" autocomplete="name" /></div>
+          <div class="om-g"><label>Phone Number <span style="color:#EF5350">*</span></label><input type="tel" id="om-phone" class="om-inp" placeholder="+91 00000 00000" autocomplete="tel" /></div>
         </div>
-        <div class="modal-form-row">
-          <div class="form-group"><label>Date</label><input type="date" id="m-date" class="form-control" /></div>
-          <div class="form-group"><label>Number of Persons *</label><input type="number" id="m-persons" class="form-control" min="1" value="1" required /></div>
+        <div class="om-row">
+          <div class="om-g"><label>Date of Visit</label><input type="date" id="om-date" class="om-inp" /></div>
+          <div class="om-g"><label>No. of Persons <span style="color:#EF5350">*</span></label><input type="number" id="om-persons" class="om-inp" min="1" max="500" value="1" /></div>
         </div>
-        <div class="form-group"><label>Special Requests</label><textarea id="m-special" class="form-control" rows="2" placeholder="Any dietary needs or special requests..."></textarea></div>
-        <button type="submit" class="modal-submit-btn">
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
-          Confirm &amp; Send on WhatsApp →
+        <div class="om-g"><label>Special Requests</label><textarea id="om-special" class="om-inp" rows="2" placeholder="Dietary needs, allergies or special requirements..."></textarea></div>
+        <p class="om-err" id="om-err" role="alert">Please enter your name and phone number to continue.</p>
+        <button type="submit" class="om-send">
+          <svg width="17" height="17" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
+          Confirm &amp; Send on WhatsApp
         </button>
-        <p class="modal-note">Your order message is sent directly to our WhatsApp. We'll confirm shortly. 🙏</p>
+        <p class="om-note">Your order is sent directly to our WhatsApp. We will confirm shortly. Thank you.</p>
       </form>
     </div>
   </div>
 </div>
 
+<!-- BACK TO TOP + FLOAT WA -->
 <button class="btt" aria-label="Back to top"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="18 15 12 9 6 15"/></svg></button>
-<a class="float-wa" href="https://wa.me/918248077837" target="_blank" aria-label="WhatsApp">
+<a class="float-wa" href="https://wa.me/918248077837" target="_blank" rel="noopener" aria-label="Chat with Sri Skanda Bhavan on WhatsApp">
   <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 0 1-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 0 1-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 0 1 2.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0 0 12.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 0 0 5.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 0 0-3.48-8.413Z"/></svg>
 </a>
-<div class="lightbox"><span class="lightbox-close">✕</span><img src="" alt="" /></div>
-
+<div class="lightbox" role="dialog" aria-label="Image viewer"><span class="lightbox-close" aria-label="Close">&#10005;</span><img src="" alt="" /></div>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 <script src="js/main.js"></script>
 <script>
-/* ── RESTAURANT PAGE SPECIFIC JS ──────────────────────────── */
-(function() {
+/* ════════════════════════════════════════════════════════════
+   RESTAURANT PAGE - Complete Logic
+   Filter tabs · Type toggles · Combo expand · Order modal
+   ════════════════════════════════════════════════════════════ */
+(function () {
   'use strict';
 
-  /* ── ACTIVE TYPE TRACKING ─────────────────────────────── */
-  let activeType = 'regular';
+  /* ── STATE ─────────────────────────────────────────────── */
+  var activeMeal = 'breakfast';
+  var activeType = 'regular';
 
-  /* ── MEAL TABS ────────────────────────────────────────── */
-  const mealTabs  = document.querySelectorAll('.meal-tab');
-  const menuSecs  = document.querySelectorAll('.menu-section');
+  var mealSections = document.querySelectorAll('.menu-section');
+  var mealTabs     = document.querySelectorAll('.meal-tab');
+  var togR = document.getElementById('tog-regular');
+  var togV = document.getElementById('tog-vaitheegam');
+  var togA = document.getElementById('tog-alacarte');
 
+  /* ── SHOW TYPE sections inside a meal section ──────────── */
+  function showType(section, type) {
+    section.querySelectorAll('.menu-type-section').forEach(function (s) {
+      s.style.display = (s.dataset.type === type) ? 'block' : 'none';
+    });
+  }
+
+  /* ── SHOW MEAL ─────────────────────────────────────────── */
   function showMeal(meal) {
-    mealTabs.forEach(t => t.classList.toggle('active', t.dataset.meal === meal));
-    menuSecs.forEach(s => {
+    activeMeal = meal;
+    mealTabs.forEach(function (t) {
+      t.classList.toggle('active', t.dataset.meal === meal);
+      t.setAttribute('aria-selected', t.dataset.meal === meal ? 'true' : 'false');
+    });
+    mealSections.forEach(function (s) {
       if (s.dataset.meal === meal) {
         s.style.display = 'block';
         showType(s, activeType);
@@ -707,171 +995,192 @@
     });
   }
 
-  mealTabs.forEach(tab => {
-    tab.addEventListener('click', () => showMeal(tab.dataset.meal));
-  });
-
-  /* ── TYPE TOGGLES ─────────────────────────────────────── */
-  const togRegular    = document.getElementById('tog-regular');
-  const togVaitheegam = document.getElementById('tog-vaitheegam');
-  const togAlacarte   = document.getElementById('tog-alacarte');
-  const allToggles    = [togRegular, togVaitheegam, togAlacarte];
-
-  function showType(section, type) {
-    const typeSecs = section.querySelectorAll('.menu-type-section');
-    typeSecs.forEach(s => {
-      s.style.display = s.dataset.type === type ? 'block' : 'none';
+  /* ── SET TYPE TOGGLE ───────────────────────────────────── */
+  function setType(type) {
+    activeType = type;
+    [togR, togV, togA].forEach(function (t) { t.classList.remove('active'); });
+    if (type === 'regular')    togR.classList.add('active');
+    if (type === 'vaitheegam') togV.classList.add('active');
+    if (type === 'alacarte')   togA.classList.add('active');
+    /* Apply ONLY to the currently visible meal section */
+    mealSections.forEach(function (s) {
+      if (s.dataset.meal === activeMeal) showType(s, type);
     });
   }
 
-  function setToggle(type) {
-    activeType = type;
-    allToggles.forEach(t => t.classList.remove('active'));
-    if (type === 'regular')    togRegular.classList.add('active');
-    if (type === 'vaitheegam') togVaitheegam.classList.add('active');
-    if (type === 'alacarte')   togAlacarte.classList.add('active');
-    // Apply to ALL menu-sections (visible ones will show correct type, hidden ones pre-set for when they appear)
-    menuSecs.forEach(s => showType(s, type));
-  }
+  /* ── BIND TABS ─────────────────────────────────────────── */
+  mealTabs.forEach(function (tab) {
+    tab.addEventListener('click', function () { showMeal(tab.dataset.meal); });
+  });
+  togR.addEventListener('click', function () { setType('regular'); });
+  togV.addEventListener('click', function () { setType('vaitheegam'); });
+  togA.addEventListener('click', function () { setType('alacarte'); });
 
-  togRegular?.addEventListener('click',    () => setToggle('regular'));
-  togVaitheegam?.addEventListener('click', () => setToggle('vaitheegam'));
-  togAlacarte?.addEventListener('click',   () => setToggle('alacarte'));
+  /* ── INIT ──────────────────────────────────────────────── */
+  showMeal('breakfast');
+  setType('regular');
 
-  /* ── INIT: show breakfast + regular ──────────────────── */
-  menuSecs.forEach(s => { s.style.display = 'none'; });
-  const breakfastSec = document.querySelector('.menu-section[data-meal="breakfast"]');
-  if (breakfastSec) {
-    breakfastSec.style.display = 'block';
-    showType(breakfastSec, 'regular');
-  }
-  togRegular?.classList.add('active');
-
-  /* ── COMBO "SHOW MORE / LESS" ─────────────────────────── */
-  document.querySelectorAll('.combo-more-btn').forEach(btn => {
-    const ul    = btn.previousElementSibling;
-    const items = ul.querySelectorAll('li');
-    const MAX   = 6;
+  /* ── COMBO SHOW MORE / LESS ────────────────────────────── */
+  document.querySelectorAll('.combo-more-btn').forEach(function (btn) {
+    var ul    = btn.previousElementSibling;
+    var items = ul.querySelectorAll('li');
+    var MAX   = 6;
     if (items.length <= MAX) { btn.style.display = 'none'; return; }
-    items.forEach((li, i) => { if (i >= MAX) li.style.display = 'none'; });
-    btn.textContent = `+ ${items.length - MAX} more items →`;
-    btn.addEventListener('click', () => {
-      const isHidden = [...items].some(li => li.style.display === 'none');
-      if (isHidden) {
-        items.forEach(li => li.style.display = '');
-        btn.textContent = '− Show less';
+    items.forEach(function (li, i) { if (i >= MAX) li.style.display = 'none'; });
+    btn.textContent = '+ ' + (items.length - MAX) + ' more items';
+    btn.addEventListener('click', function () {
+      var anyHidden = Array.from(items).some(function (li) {
+        return li.style.display === 'none';
+      });
+      if (anyHidden) {
+        items.forEach(function (li) { li.style.display = ''; });
+        btn.textContent = 'Show less';
       } else {
-        items.forEach((li, i) => { if (i >= MAX) li.style.display = 'none'; });
-        btn.textContent = `+ ${items.length - MAX} more items →`;
+        items.forEach(function (li, i) { if (i >= MAX) li.style.display = 'none'; });
+        btn.textContent = '+ ' + (items.length - MAX) + ' more items';
       }
     });
   });
 
-  /* ── ORDER MODAL ──────────────────────────────────────── */
-  const overlay   = document.getElementById('orderModalOverlay');
-  const closeBtn  = document.getElementById('modalCloseBtn');
-  const modalForm = document.getElementById('modal-order-form');
-  const modalTitle = document.getElementById('modal-title');
-  const modalTag  = document.getElementById('modal-plan-tag');
+  /* ── ORDER MODAL ───────────────────────────────────────── */
+  var overlay   = document.getElementById('omOverlay');
+  var closeBtn  = document.getElementById('om-close');
+  var omForm    = document.getElementById('om-form');
+  var omTitle   = document.getElementById('om-title');
+  var omTag     = document.getElementById('om-tag');
+  var omPriceEl = document.getElementById('om-price');
+  var omErr     = document.getElementById('om-err');
 
-  let currentPlan = '', currentPrice = '', currentMeal = '';
+  var curPlan = '', curPrice = '', curMeal = '';
+
+  function todayISO() {
+    var d = new Date();
+    return d.getFullYear() + '-'
+      + String(d.getMonth() + 1).padStart(2, '0') + '-'
+      + String(d.getDate()).padStart(2, '0');
+  }
 
   function openModal(plan, price, meal) {
-    currentPlan  = plan;
-    currentPrice = price;
-    currentMeal  = meal;
-    modalTitle.textContent = `Order: ${plan}`;
-    modalTag.textContent   = `${meal} · ${price} per person`;
+    curPlan  = plan;
+    curPrice = price;
+    curMeal  = meal;
+    omTitle.textContent   = plan;
+    omTag.textContent     = meal + ' Order';
+    omPriceEl.innerHTML   = '&#8377;' + price + ' per person';
+    omErr.style.display   = 'none';
+    document.getElementById('om-date').value = todayISO();
     overlay.classList.add('open');
     document.body.style.overflow = 'hidden';
-    // Set today as default date
-    const today = new Date().toISOString().split('T')[0];
-    document.getElementById('m-date').value = today;
-    document.getElementById('m-name').focus();
+    setTimeout(function () {
+      var n = document.getElementById('om-name');
+      if (n) n.focus();
+    }, 320);
   }
 
   function closeModal() {
     overlay.classList.remove('open');
     document.body.style.overflow = '';
-    modalForm.reset();
+    omForm.reset();
+    omErr.style.display = 'none';
   }
 
-  closeBtn?.addEventListener('click', closeModal);
-  overlay?.addEventListener('click', e => { if (e.target === overlay) closeModal(); });
-  document.addEventListener('keydown', e => { if (e.key === 'Escape') closeModal(); });
-
-  /* Open modal from combo cards */
-  document.querySelectorAll('.open-order-modal').forEach(btn => {
-    btn.addEventListener('click', () => {
-      openModal(btn.dataset.plan, btn.dataset.price, btn.dataset.meal || 'Meal');
+  /* Bind open modal to ALL .open-om buttons */
+  document.querySelectorAll('.open-om').forEach(function (btn) {
+    btn.addEventListener('click', function (e) {
+      e.stopPropagation();
+      openModal(
+        btn.dataset.plan  || 'Order',
+        btn.dataset.price || '0',
+        btn.dataset.meal  || 'Meal'
+      );
     });
   });
 
-  /* Modal form submit → WhatsApp */
-  modalForm?.addEventListener('submit', e => {
+  closeBtn.addEventListener('click', closeModal);
+  overlay.addEventListener('click', function (e) {
+    if (e.target === overlay) closeModal();
+  });
+  document.addEventListener('keydown', function (e) {
+    if (e.key === 'Escape') closeModal();
+  });
+
+  /* ── MODAL FORM SUBMIT → WhatsApp ─────────────────────── */
+  omForm.addEventListener('submit', function (e) {
     e.preventDefault();
-    const name    = document.getElementById('m-name').value.trim();
-    const phone   = document.getElementById('m-phone').value.trim();
-    const date    = document.getElementById('m-date').value;
-    const persons = document.getElementById('m-persons').value;
-    const special = document.getElementById('m-special').value.trim();
+    var name    = document.getElementById('om-name').value.trim();
+    var phone   = document.getElementById('om-phone').value.trim();
+    var date    = document.getElementById('om-date').value;
+    var persons = document.getElementById('om-persons').value;
+    var special = document.getElementById('om-special').value.trim();
 
     if (!name || !phone) {
-      alert('Please enter your name and phone number.');
+      omErr.style.display = 'block';
+      document.getElementById(!name ? 'om-name' : 'om-phone').focus();
       return;
     }
+    omErr.style.display = 'none';
 
-    const dateStr = date ? new Date(date).toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' }) : 'To be confirmed';
+    var dateStr = 'To be confirmed';
+    if (date) {
+      try {
+        dateStr = new Date(date).toLocaleDateString('en-IN', {
+          day: 'numeric', month: 'long', year: 'numeric'
+        });
+      } catch (err) { dateStr = date; }
+    }
 
-    const msg = `🙏 *Sri Skanda Bhavan - Meal Order*\n\n` +
-      `📋 *Order Details:*\n` +
-      `Plan: ${currentPlan}\n` +
-      `Meal: ${currentMeal}\n` +
-      `Price: ${currentPrice} per person\n\n` +
-      `👤 *Customer Details:*\n` +
-      `Name: ${name}\n` +
-      `Phone: ${phone}\n` +
-      `Date: ${dateStr}\n` +
-      `Persons: ${persons}\n` +
-      (special ? `Special Requests: ${special}\n` : '') +
-      `\nPlease confirm this order. Thank you! 🙏`;
+    var msg = '*Sri Skanda Bhavan \u2014 Meal Order*\n\n'
+      + '*Item / Plan:* ' + curPlan + '\n'
+      + '*Meal:* ' + curMeal + '\n'
+      + '*Rate:* \u20b9' + curPrice + ' per person\n\n'
+      + '*Customer Details*\n'
+      + 'Name: ' + name + '\n'
+      + 'Phone: ' + phone + '\n'
+      + 'Date: ' + dateStr + '\n'
+      + 'Persons: ' + persons + '\n'
+      + (special ? 'Requests: ' + special + '\n' : '')
+      + '\nKindly confirm this order. Thank you. \ud83d\ude4f';
 
-    window.open(`https://wa.me/918248077837?text=${encodeURIComponent(msg)}`, '_blank');
+    window.open('https://wa.me/918248077837?text=' + encodeURIComponent(msg), '_blank');
     closeModal();
   });
 
-  /* ── STATIC ORDER FORM (bottom section) ───────────────── */
-  document.getElementById('order-form')?.addEventListener('submit', e => {
-    e.preventDefault();
-    const f = e.target;
-    const name    = f.querySelector('[name="name"]').value.trim();
-    const phone   = f.querySelector('[name="phone"]').value.trim();
-    const meal    = f.querySelector('[name="meal"]').value;
-    const plan    = f.querySelector('[name="plan"]').value;
-    const date    = f.querySelector('[name="date"]').value;
-    const persons = f.querySelector('[name="persons"]').value;
-    const special = f.querySelector('[name="special"]').value.trim();
+  /* ── GENERAL ORDER FORM (bottom section) ─────────────── */
+  var genForm = document.getElementById('gen-order-form');
+  if (genForm) {
+    genForm.addEventListener('submit', function (e) {
+      e.preventDefault();
+      var name    = genForm.querySelector('[name="name"]').value.trim();
+      var phone   = genForm.querySelector('[name="phone"]').value.trim();
+      var meal    = genForm.querySelector('[name="meal"]').value;
+      var plan    = genForm.querySelector('[name="plan"]').value;
+      var date    = genForm.querySelector('[name="date"]').value;
+      var persons = genForm.querySelector('[name="persons"]').value;
+      var special = genForm.querySelector('[name="special"]').value.trim();
+      if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
+      var dateStr = 'To be confirmed';
+      if (date) {
+        try {
+          dateStr = new Date(date).toLocaleDateString('en-IN', {
+            day: 'numeric', month: 'long', year: 'numeric'
+          });
+        } catch (err) { dateStr = date; }
+      }
+      var msg = '*Sri Skanda Bhavan \u2014 Meal Order*\n\n'
+        + '*Meal:* ' + meal + '\n'
+        + '*Plan:* ' + plan + '\n\n'
+        + '*Customer Details*\n'
+        + 'Name: ' + name + '\n'
+        + 'Phone: ' + phone + '\n'
+        + 'Date: ' + dateStr + '\n'
+        + 'Persons: ' + persons + '\n'
+        + (special ? 'Requests: ' + special + '\n' : '')
+        + '\nKindly confirm this order. Thank you. \ud83d\ude4f';
+      window.open('https://wa.me/918248077837?text=' + encodeURIComponent(msg), '_blank');
+    });
+  }
 
-    if (!name || !phone) { alert('Please enter your name and phone number.'); return; }
-
-    const dateStr = date ? new Date(date).toLocaleDateString('en-IN', { day:'numeric', month:'long', year:'numeric' }) : 'To be confirmed';
-
-    const msg = `🙏 *Sri Skanda Bhavan - Meal Order*\n\n` +
-      `📋 *Order Details:*\n` +
-      `Meal: ${meal}\n` +
-      `Plan: ${plan}\n\n` +
-      `👤 *Customer Details:*\n` +
-      `Name: ${name}\n` +
-      `Phone: ${phone}\n` +
-      `Date: ${dateStr}\n` +
-      `Persons: ${persons}\n` +
-      (special ? `Special Requests: ${special}\n` : '') +
-      `\nPlease confirm this order. Thank you! 🙏`;
-
-    window.open(`https://wa.me/918248077837?text=${encodeURIComponent(msg)}`, '_blank');
-  });
-
-})();
+}());
 </script>
 </body>
 </html>
